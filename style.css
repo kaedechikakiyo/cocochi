@@ -1,0 +1,950 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family:"A1-medi";
+    src: url(font/AP-OTF-A1GothicStdN-Medium.otf);
+  }
+  @font-face {
+    font-family:"A1-light";
+    src: url(font/AP-OTF-A1GothicStdN-Light.otf);
+  }
+  
+  @font-face {
+      font-family:"DIN";
+      src: url(font/DIN\ Alternate\ Bold.ttf);
+    }
+  
+    @font-face {
+      font-family:"Shuei";
+      src: url(font/FOT-DNPShueiGoGinStd-L.otf);
+    }
+      
+    @font-face {
+      font-family:"Jose";
+      src: url(font/JosefinSans-SemiBoldItalic.ttf);
+    }
+
+
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
+  align-items: center;
+  padding: 0 3vw;
+  position: relative;
+  z-index: 2; /*重ね順*/
+}
+
+body {
+  color: #231300;
+}
+
+.header-logo-wrap {
+  width: 12vw;
+  margin-top:7vh;
+}
+
+.header-logo-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav-list {
+  list-style: none;
+}
+
+.header-nav-list li {
+  display: inline-block;
+  margin: 0 1.5vw;
+}
+
+.header-nav-list a {
+  text-decoration: none;
+  color: #231300;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: "A1-light",'interstate-mono, monospace';
+  font-style: italic;
+}
+
+.header-nav-list a:hover {
+  text-decoration: none;
+  color: #A8C692;
+  font-size: 16px;
+  /*letter-spacing: 0.05em; /*文字間*/
+  font-family: "A1-light",'interstate-mono, monospace';
+  font-style: italic;
+}
+
+
+
+.header-sp-icon-wrap{
+  display: none;
+}
+
+.header-sp-nav{
+    display: none;
+}
+
+.header-sp-nav img{
+  display: none;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+.main-visual { /*親要素*/
+  width: 100%;
+  height: 100vh; /*calc(100vh-80px)で画面いっぱいからヘッダー分の高さを引く*/
+ 
+  position: relative;
+  margin-bottom: 160px;
+}
+
+
+.main-visual-img-wrap {
+  width: 100%;
+  height: 100%;
+  margin-top:-25vh;
+  float: right;
+}
+
+.main-visual-img-wrap img {
+  width: 100%;
+  height: 105%;
+  object-fit: cover;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+.main-logo-wrap {
+  width: 0;
+}
+
+.main-visual-scroll{ /*クラスにあてるときは最初に.をつける*/
+ width:35px;
+ position: absolute; /*親要素=main-visualのなかで絶対配置(親要素はposition:relative;としておく・topやleftなどを使える*/
+ left:0;
+ right:0;
+ bottom:13vh;
+ margin:auto; /*左右中央に配置できる*/
+ animation-name: fadein;
+ animation-duration: 3s;
+}
+
+.main-visual-scroll img{ /*main-visual-scrollのなかのimgタグ*/
+ width:100%; /*親要素＝30pxと同じサイズになる*/
+}
+
+  
+ .catch-copy{
+  padding:0 30vw ;
+   margin-bottom: 160px;
+   animation-name: fadein;
+   animation-duration: 3s;
+ }
+
+ .catch-copy .midashi {
+    position:absolute; 
+    left:36vw;
+    width:3vw;
+      box-sizing:border-box;
+  }
+
+  .catch-copy .midashi img{
+    width:100%;
+    object-fit:cover /*ボックスに合わせてリサイズ*/
+  }
+
+ .catch-copy-title{
+   color:#231300;
+   font-size: 25px;
+   font-family: "A1-light",'interstate-mono, monospace';
+   margin-bottom: 10vh;
+   font-weight: 600;
+   font-style: italic;
+   margin-left:10vw;
+ }
+
+ .catch-copy-theme{
+    color:#231300;
+    font-size: 20px;
+    font-family: "A1-medi",'interstate-mono, monospace';
+    margin-left:6vw;
+    line-height: 2;
+ }
+
+ .catch-copy-text{
+   line-height: 2; /*行間・2にすると文字の２倍の高さ*/
+   font-family: "A1-light",'interstate-mono, monospace';
+   margin-top:5vh;
+   margin-left:6vw;
+ }
+
+
+ .what{
+  padding: 100px 0 0; /*内側の余白*/
+}
+
+.what-list{
+  padding-bottom:50px;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  list-style: none;
+}
+
+.what-list li{
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.what-list-img-wrap{
+  width:50%
+}
+
+.what-list-img-wrap img{
+  width:100%
+}
+
+.what-list-caption{
+  width: 35%;
+  padding-right:30px;
+   padding-left:30px;
+}
+
+.what-list-caption h3{
+ font-size: 22px;
+ margin-bottom: 20px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ letter-spacing: 1px;
+ font-style: italic;
+}
+
+.what-list-caption p{
+ font-size: 14px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ margin-left:49px;
+ margin-bottom: 30px;
+ line-height: 1.5;
+}
+
+.what-list-caption a{
+ width: 160px;
+ height: 40px;
+ font-size: 13px;
+ font-weight: 600;
+ text-decoration: none;
+ font-family: "A1-light",'interstate-mono, monospace';
+ color:#231300;
+ border: solid 1px #231300; /*一重の線*/
+ border-radius: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center; /*この３列で上下中央ぞろえ*/
+ float: right;
+}
+
+.what-list-caption a:hover{
+  width: 160px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "A1-light",'interstate-mono, monospace';
+  color:#A8C692;
+  border: solid 1px #A8C692; /*一重の線*/
+  display: flex;
+  align-items: center;
+  justify-content: center; /*この３列で上下中央ぞろえ*/
+  float: right;
+ }
+
+.what-list-caption img{
+ width:30px;
+}
+
+.what-list-reverse{
+ flex-direction: row-reverse; /*配置が左右逆*/
+}
+
+.what-list2{
+  flex-direction: row; /*配置が左右逆*/
+ }
+
+ /* Begin Left Contact Page */
+#contact {
+  width: 100%;
+  overflow: hidden;
+  padding-top:100px;
+  padding-bottom: 180px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.section-header img{
+  width:30px;
+  object-fit:cover /*ボックスに合わせてリサイズ*/
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+.feedback-input {
+  color:#231300;
+  font-family: "A1-light",'interstate-mono, monospace';
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:1px solid #A8C692;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:1px solid #bedba8; }
+
+textarea {
+  height: 250px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: "A1-light",'interstate-mono, monospace';
+  width: 100%;
+  background:#A8C692;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  padding-top:8px;
+  padding-bottom:8px;
+  transition: all 0.3s;
+  font-weight:700;
+}
+[type="submit"]:hover { }
+
+
+
+
+/* ここからフッター */
+footer {
+  border-top: solid 1px lightgray;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom:20px;
+}
+
+.scroll-top {
+  width:3vw;
+  text-decoration: none;
+  color: #231300;
+  margin-top:300px;
+  margin-right:80px;
+}
+
+
+.scroll-top img {
+  display: block;
+  width: 100%;
+}
+
+ 
+ .officialsite{
+  position: absolute;
+  left:10px;
+ }
+
+ .officialsite li{
+   margin-left:80px;
+   flex-direction: column; /*積み重なるように配置する*/
+   list-style: none;
+ }
+ 
+ .officialsite a{
+  text-decoration: none;
+  color: gray;
+  font-family: "A1-light",'interstate-mono, monospace';
+
+  letter-spacing: 1px;
+  font-size: 14px;
+  }
+
+
+.copyright {
+  color: gray;
+  position: absolute;
+  bottom: 40px;
+  left:90px;
+  text-align: center;
+  font-family: "A1-light",'interstate-mono, monospace';
+
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+
+/*iPad用 画面の幅が480px以下の時は下のコードが反映される*/
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+
+  .header-logo-wrap {
+    width: 15vw;
+    margin-top:3vh;
+  }
+  
+  .header-logo-wrap img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-visual { /*親要素*/
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    margin-bottom:-50px;
+  }
+  
+  
+  .main-visual-img-wrap {
+    width: 100%;
+    height: 100%;
+    margin-top:-15vh;
+    float: right;
+  }
+  
+  .main-visual-img-wrap img {
+    width: 100%;
+    height: 105%;
+    object-fit: cover;
+    animation-name: fadein;
+    animation-duration: 3s;
+  }
+  
+  .main-visual-scroll{ /*クラスにあてるときは最初に.をつける*/
+   display: none;
+  }
+  
+.catch-copy{
+  padding:0 23vw;
+
+   margin-bottom: 160px;
+ }
+
+ .catch-copy .midashi {
+    position:absolute; 
+    left:26vw;
+    width:5vw;
+      box-sizing:border-box;
+  }
+
+  .catch-copy .midashi img{
+    width:100%;
+    object-fit:cover /*ボックスに合わせてリサイズ*/
+  }
+
+ .catch-copy-title{
+    color: #231300;
+    font-size: 25px;
+    font-family: "A1-light",'interstate-mono, monospace';
+    margin-bottom: 5vh;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 10vw;
+ }
+
+ .catch-copy-theme{
+    color:#231300;
+    font-size: 23px;
+    font-family: "A1-medi",'interstate-mono, monospace';
+    margin-left:6vw;
+    line-height: 2;
+ }
+
+ .catch-copy-text{
+   line-height: 2; /*行間・2にすると文字の２倍の高さ*/
+   font-family: "A1-light",'interstate-mono, monospace';
+   margin-top:5vh;
+   margin-left:6vw;
+   font-size: 16px;
+ }
+
+ .what{
+  padding: 100px 0 0; /*内側の余白*/
+}
+
+.what-list{
+  padding-bottom:70px;
+}
+
+.what-list li{
+  flex-direction: column; /*積み重なるように配置する*/
+  margin-bottom:60px;
+}
+
+.what-list-img-wrap{
+  width: 70vw;
+  margin-bottom: 40px;
+}
+
+.what-list-caption{
+  width: 70%;
+  padding: 0 20px;
+}
+
+.what-list-caption h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.what-list-caption img{
+  width: 25px;
+}
+
+.what-list-caption p{
+  font-size: 15px;
+  margin-left: 31px;
+}
+
+.what-list-caption a{
+  width: 140px;
+  height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "A1-light",'interstate-mono, monospace';
+    color:#231300;
+    border: solid 1px #231300; /*一重の線*/
+    display: flex;
+    align-items: center;
+    justify-content: center; /*この３列で上下中央ぞろえ*/
+    float: right;
+   }
+
+
+.what-list-caption a:hover{
+  width: 140px;
+  height: 40px;
+   }
+}
+
+
+
+/*スマホ用 画面の幅が480px以下の時は下のコードが反映される*/
+@media screen and (max-width: 480px){ 
+header{
+  height:60px;
+  padding-right:6vw;
+}
+
+.header-nav-list{
+  display: none;
+}
+
+.header-logo-wrap {
+  width: 0;
+  margin-top:2vh;
+}
+
+
+.main-visual{
+  height:50vh;
+  margin-bottom: 50vh;
+}
+
+.main-visual-img-wrap{ /*画像を包んでいたボックス*/
+  width: 100%;
+  float:none; /*右に寄せていたものを解除*/
+  margin:0;
+  margin-top:-10vh;
+}
+
+
+.main-visual-img-wrap img {
+  width: 100%;
+  height: 115%;
+  object-fit: cover;
+}
+
+
+.main-logo-wrap {
+  width: 60vw;
+  margin: -20px auto;
+}
+
+.main-logo-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.main-visual-scroll{ /*クラスにあてるときは最初に.をつける*/
+  width:30px;
+  position: absolute; /*親要素=main-visualのなかで絶対配置(親要素はposition:relative;としておく・topやleftなどを使える*/
+  left:0;
+  right:0;
+  bottom:-45vh;
+  margin:auto; /*左右中央に配置できる*/
+ }
+ 
+ .main-visual-scroll img{ /*main-visual-scrollのなかのimgタグ*/
+  width:100%; /*親要素＝30pxと同じサイズになる*/
+ }
+
+.catch-copy{
+  padding:0 7vw;
+  margin-top:60px;
+  margin-bottom: 100px;
+}
+
+.catch-copy .midashi {
+  position:absolute; 
+  left:37vw;
+  width:8vw;
+    box-sizing:border-box;
+}
+
+.catch-copy-title{
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-left:38vw;
+}
+
+.catch-copy-theme{
+  color:#231300;
+  font-size: 16px;
+  font-family: "A1-medi",'interstate-mono, monospace';
+  font-weight: 400;
+  margin-left:6vw;
+  line-height:1.5;
+}
+
+.catch-copy-text{
+  font-size: 11px; /*12pxくらいが標準*/ 
+}
+
+.what{
+  padding-top:80px;
+}
+
+.what-list{
+  padding-bottom:40px;
+}
+
+.what-list li{
+  flex-direction: column; /*積み重なるように配置する*/
+  margin-bottom:50px;
+}
+
+.what-list-img-wrap{
+  width: 100vw;
+  margin-bottom: 40px;
+}
+
+
+.what-list-caption{
+  width: 70%;
+  margin-left:10px;
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.what-list-caption h3{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.what-list-caption img{
+  width: 20px;
+}
+
+.what-list-caption p{
+  font-size: 12px;
+  margin-left: 31px;
+}
+
+.what-list-caption a{
+  width: 140px;
+  height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "A1-light",'interstate-mono, monospace';
+    color:#231300;
+    border: solid 1px #231300; /*一重の線*/
+    display: flex;
+    align-items: center;
+    justify-content: center; /*この３列で上下中央ぞろえ*/
+    float: right;
+   }
+
+   .what-list-caption a:hover {
+    width: 140px;
+    height: 40px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      font-family: "A1-light",'interstate-mono, monospace';
+      color:#A8C692;
+      border: solid 1px #A8C692; /*一重の線*/
+      display: flex;
+      align-items: center;
+      justify-content: center; /*この３列で上下中央ぞろえ*/
+      float: right;
+}
+
+ /* Begin Left Contact Page */
+ #contact {
+  width: 70%;
+  margin:auto;
+  overflow: hidden;
+  padding-top:100px;
+  padding-bottom: 180px;
+}
+
+.section-header {
+  font-size: 15px;
+  margin-top: 15px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.section-header img{
+  width:20px;
+  object-fit:cover /*ボックスに合わせてリサイズ*/
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+.feedback-input {
+  color:#231300;
+  font-family: "A1-light",'interstate-mono, monospace';
+  font-weight:500;
+  font-size: 15px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:1px solid #A8C692;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:1px solid #A8C692; }
+
+textarea {
+  height: 200px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: "A1-light",'interstate-mono, monospace';
+  width: 100%;
+  background:#A8C692;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:15px;
+  padding-top:5px;
+  padding-bottom:5px;
+  transition: all 0.3s;
+  font-weight:700;
+}
+[type="submit"]:hover {  border:1px solid #; }
+
+
+
+     footer {
+      height: 200px;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .officialsite{
+      left:10px;
+     }
+
+     .officialsite li{
+       flex-direction: column; /*積み重なるように配置する*/
+       list-style: none;
+       margin-left:30px;
+     }
+     
+     .officialsite a{
+      color: gray;
+      font-family: "A1-light",'interstate-mono, monospace';
+ 
+      letter-spacing: 1px;
+      font-size: 11px;
+      }
+    
+    .scroll-top {
+      width:8vw;
+      text-decoration: none;
+      color: #231300;
+      margin-top:260px;
+      margin-right:30px;
+      margin-bottom:2px;
+    }
+    
+    .scroll-top img {
+      display: block;
+      width: 100%;
+    }
+    
+    .copyright {
+      color: gray;
+      position: absolute;
+      bottom: 10px;
+      left:40px;
+      text-align: center;
+      font-family: "A1-light",'interstate-mono, monospace';
+    
+      letter-spacing: 1px;
+      font-size: 10px;
+    }
+ 
+.header-sp-icon-wrap{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column; /*縦並び*/
+  align-items: center; /*垂直方向に整列*/
+  justify-content: space-around; /*線同士の間隔が確保される*/
+  z-index: 100;
+}
+
+.header-sp-icon-bar1,
+.header-sp-icon-bar2,
+.header-sp-icon-bar3{
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #231300;
+  border-radius: 1px; /*線が丸くなる*/
+  transform-origin: left; /*起点の設定・線の左端が起点になる*/
+  transition: all 0.3s ease-out; /*all変化するすべてのプロパティに適用*/
+}
+
+.is-open .header-sp-icon-bar1{ /*is-openのなかの子要素、開いてる時の棒*/
+  transform: rotate(45deg); /*大きさや回転などの変化を制御する/45度*/
+  
+}
+
+.is-open .header-sp-icon-bar2{ 
+  transform: scale(0); /*消す*/
+}
+
+.is-open .header-sp-icon-bar3{ 
+  transform: rotate(-45deg);
+}
+
+
+.header-sp-nav{
+  position: fixed; /*どの位置で開いても画面を覆い尽くす＋スクロールしない*/
+  width:100vw;
+  height: 100vh; /*画面いっぱいのサイズに*/
+  top:0;
+  left:0; /*一番上ぴったり＋一番左ぴったり*/
+  background-color: #bedba8;
+  display: none; /*通常は表示されない、jsで指定*/
+  
+}
+
+.header-sp-nav-list{
+  padding-top:20vh;
+  margin:auto; /*左右中央に配置*/
+  list-style: none;
+}
+
+
+.header-sp-nav-list li{
+  margin-bottom: 18px;
+}
+
+.header-sp-nav-list a{
+  font-family: "A1-light";
+  font-weight: 600;
+  font-size: 16px;
+  color: white; /*aタグは色指定しないと訪問済みリンクになる*/
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-style: italic;
+}
+
+.header-sp-nav-list  a:hover {
+  text-decoration: none;
+  color: #A8C692;
+  font-size: 16px;
+  /*letter-spacing: 0.05em; /*文字間*/
+  font-family: "A1-light";
+  font-style: italic;
+}
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }

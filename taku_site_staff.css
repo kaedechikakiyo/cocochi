@@ -1,0 +1,528 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family:"DIN";
+    src: url(font/DIN\ Alternate\ Bold.ttf);
+  }
+
+  @font-face {
+    font-family:"A1-medi";
+    src: url(font/AP-OTF-A1GothicStdN-Medium.otf);
+  }
+  @font-face {
+    font-family:"A1-light";
+    src: url(font/AP-OTF-A1GothicStdN-Light.otf);
+  }
+
+  @font-face {
+    font-family:"DIN";
+    src: url(font/DIN\ Alternate\ Bold.ttf);
+  }
+
+  @font-face {
+    font-family:"Shuei";
+    src: url(font/FOT-DNPShueiGoGinStd-L.otf);
+  }
+
+
+  header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
+    align-items: center;
+    padding: 0 3vw;
+    
+    position: relative;
+    z-index: 2; /*重ね順*/
+  }
+  
+  body {
+    color: #231300;
+  }
+
+.header-logo-wrap {
+  width: 12vw;
+  margin-top:6vh;
+}
+
+.header-logo-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav-list {
+  list-style: none;
+}
+
+.header-nav-list li {
+  display: inline-block;
+  margin: 0 1.5vw;
+}
+
+.header-nav-list a {
+  text-decoration: none;
+  color: #231300;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: "A1-light";
+  font-style: italic;
+}
+
+.header-nav-list a:hover {
+  text-decoration: none;
+  color: #A8C692;
+  font-size: 16px;
+  /*letter-spacing: 0.05em; /*文字間*/
+  font-family: "A1-light";
+  font-style: italic;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+.header-sp-icon-wrap{
+  display: none;
+}
+
+.header-sp-nav{
+  display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  header {
+    width: 100%;
+    height: 8vh; /*ヘッダーの高さ*/
+    display: flex;
+    justify-content: space-between; /*水平方向の揃え*/
+    align-items: center; /*垂直方向の揃え*/
+    padding-left:88vw;
+    font-family:"Shuei";
+  }
+
+  .header-logo-wrap {
+    display:none;
+  }
+  .header-nav-list {
+  display:none;
+  }
+
+  
+  .header-sp-icon-wrap{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column; /*縦並び*/
+    align-items: center; /*垂直方向に整列*/
+    justify-content: space-around; /*線同士の間隔が確保される*/
+    z-index: 100;
+  }
+  
+  .header-sp-icon-bar1,
+  .header-sp-icon-bar2,
+  .header-sp-icon-bar3{
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #231300;
+    border-radius: 1px; /*線が丸くなる*/
+    transform-origin: left; /*起点の設定・線の左端が起点になる*/
+    transition: all 0.3s ease-out; /*all変化するすべてのプロパティに適用*/
+  }
+  
+  .is-open .header-sp-icon-bar1{ /*is-openのなかの子要素、開いてる時の棒*/
+    transform: rotate(45deg); /*大きさや回転などの変化を制御する/45度*/
+    
+  }
+  
+  .is-open .header-sp-icon-bar2{ 
+    transform: scale(0); /*消す*/
+  }
+  
+  .is-open .header-sp-icon-bar3{ 
+    transform: rotate(-45deg);
+  }
+  
+  
+  .header-sp-nav{
+    position: fixed; /*どの位置で開いても画面を覆い尽くす＋スクロールしない*/
+    width:100vw;
+    height: 100vh; /*画面いっぱいのサイズに*/
+    top:0;
+    left:0; /*一番上ぴったり＋一番左ぴったり*/
+    background-color: #bedba8;
+    display: none; /*通常は表示されない、jsで指定*/
+  }
+  
+  .header-sp-nav-list{
+    padding-top:20vh;
+    margin:auto; /*左右中央に配置*/
+    list-style: none;
+  }
+  
+  
+  .header-sp-nav-list li{
+    margin-bottom: 18px;
+  }
+  
+  .header-sp-nav-list a{
+    font-family: "A1-light";
+    font-weight: 600;
+    font-size: 16px;
+    color: white; /*aタグは色指定しないと訪問済みリンクになる*/
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-style: italic;
+  }
+  
+  .header-sp-nav-list  a:hover {
+    text-decoration: none;
+    color: #A8C692;
+    font-size: 16px;
+    /*letter-spacing: 0.05em; /*文字間*/
+    font-family: "A1-light";
+    font-style: italic;
+   }
+  }
+
+
+main{
+  display:flex;
+  flex-wrap:wrap; /*折り返して配置*/
+  margin:0 15vw;
+  padding-top:40vh;
+  padding-bottom:14vh;
+  justify-content:space-between;
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+  main{
+    padding-top:30vh;
+    padding-bottom:8vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main{
+    display:flex;
+    flex-wrap:wrap; /*折り返して配置*/
+    margin:1vh 12vw;
+    justify-content:space-between;
+  }
+}
+
+.midashi {
+ position:absolute; 
+ top: 22vh;
+ left: 15vw;
+   box-sizing:border-box;
+   animation-name: fadein;
+   animation-duration: 3s;
+}
+
+.midashi img {
+  width:3vw;
+  object-fit:cover /*ボックスに合わせてリサイズ*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+  .midashi {
+    position:absolute; 
+    top: 22vh;
+    left: 14vw;
+      box-sizing:border-box;
+   }
+   
+   .midashi img {
+     width:4vw;
+     object-fit:cover /*ボックスに合わせてリサイズ*/
+   }
+  }
+  
+  @media screen and (max-width: 767px) {
+  .midashi {
+    position:absolute; 
+    top: 20.5vh;
+    left: 15vw;
+      box-sizing:border-box;
+   }
+   
+   .midashi img {
+     width:6vw;
+     object-fit:cover /*ボックスに合わせてリサイズ*/
+   }
+  }
+
+
+  h1 {
+    font-size: 20px;
+    font-family: "A1-light"; 
+    font-weight: 600;
+    position:absolute;
+    top: 22vh;
+    left: 18vw;
+    text-decoration: none;
+    color: #323232;
+    letter-spacing: 0.05em;
+    animation-name: fadein;
+    animation-duration: 3s;
+  }
+
+  .about {
+    font-size: 16px;
+    font-family: "A1-light"; 
+    position:absolute;
+    top: 39vh;
+    left: 17vw;
+    text-decoration: none;
+    color: #323232;
+    letter-spacing: 0.05em;
+    line-height:18px; /*行の高さを指定*/
+    animation-name: fadein;
+    animation-duration: 3s;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px){ 
+    h1 {
+      font-size: 22px;
+      font-family: "A1-light"; 
+      font-weight: 600;
+      position:absolute;
+      top: 22vh;
+      left: 19vw;
+      text-decoration: none;
+      color: #323232;
+      letter-spacing: 0.05em;
+      font-style:italic;
+    }
+  
+    .about {
+      font-size: 16px;
+      font-family: "A1-light";
+      position:absolute;
+      top: 30vh;
+      left: 16vw;
+      right: 14vw;
+      text-decoration: none;
+      color: #323232;
+      letter-spacing: 0.07em;
+      line-height:24px; /*行の高さを指定*/
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 16px;
+      font-family: "A1-light"; 
+      font-weight: 600;
+      position:absolute;
+      top: 20vh;
+      left: 22vw;
+      text-decoration: none;
+      color: #323232;
+      letter-spacing: 0.05em;
+      font-style:italic;
+    }
+  
+    .about {
+      font-size: 12px;
+      font-family: "A1-light";
+      position:absolute;
+      top: 35vh;
+      left: 16vw;
+      right: 14vw;
+      text-decoration: none;
+      color: #323232;
+      letter-spacing: 0.07em;
+      line-height:18px; /*行の高さを指定*/
+    }
+  }
+
+
+.work{
+  width: 16vw;
+  height:100%;
+  margin-bottom:7vh;
+  margin-left:1vw;
+  /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
+  box-sizing:border-box;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+.work img {
+  width:100%;
+  height:100%;
+  object-fit:cover /*ボックスに合わせてリサイズ*/
+}
+
+
+.work p {
+  font-size: 13px;
+  color: gray;
+  position: absolute;
+  font-family: "A1-light";
+  line-height: 17px;
+  padding-top:0.2vh;
+  letter-spacing: 0.8px;
+}
+
+.work p:first-letter{
+  color: #A8C692;
+ }
+
+
+@media screen and (max-width: 767px) {
+  .work{
+    width: 37vw;
+    height:100%;
+    margin-bottom:6vh;
+    margin-left:1vw;
+  }
+  .work p {
+    font-size: 11px;
+    margin-left:1vw;
+  }
+  
+  }
+
+/* ここからフッター */
+footer {
+  border-top: solid 1px lightgray;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom:20px;
+}
+
+.scroll-top {
+  width:3vw;
+  text-decoration: none;
+  color: #231300;
+  margin-top:300px;
+  margin-right:80px;
+}
+
+
+.scroll-top img {
+  display: block;
+  width: 100%;
+}
+
+ 
+ .officialsite{
+  position: absolute;
+  left:10px;
+ }
+
+ .officialsite li{
+   margin-left:80px;
+   flex-direction: column; /*積み重なるように配置する*/
+   list-style: none;
+ }
+ 
+ .officialsite a{
+  text-decoration: none;
+  color: gray;
+  font-family: "A1-light",'interstate-mono, monospace';
+
+  letter-spacing: 1px;
+  font-size: 14px;
+  }
+
+
+.copyright {
+  color: gray;
+  position: absolute;
+  bottom: 40px;
+  left:90px;
+  text-align: center;
+  font-family: "A1-light",'interstate-mono, monospace';
+
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .officialsite{
+    left:10px;
+   }
+
+   .officialsite li{
+     flex-direction: column; /*積み重なるように配置する*/
+     list-style: none;
+     margin-left:30px;
+   }
+   
+   .officialsite a{
+    color: gray;
+    font-family: "A1-light",'interstate-mono, monospace';
+
+    letter-spacing: 1px;
+    font-size: 11px;
+    }
+  
+  .scroll-top {
+    width:8vw;
+    text-decoration: none;
+    color: #231300;
+    margin-top:260px;
+    margin-right:30px;
+    margin-bottom:2px;
+  }
+  
+  .scroll-top img {
+    display: block;
+    width: 100%;
+  }
+  
+  .copyright {
+    color: gray;
+    position: absolute;
+    bottom: 10px;
+    left:40px;
+    text-align: center;
+    font-family: "A1-light",'interstate-mono, monospace';
+  
+    letter-spacing: 1px;
+    font-size: 10px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
