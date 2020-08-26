@@ -404,7 +404,7 @@ h1 {
 }
 
 .name {
-  font-size: 12px;
+  font-size: 13px;
   color: #A8C692;
   position: absolute;
   font-family: "A1-light";
@@ -425,12 +425,13 @@ h1 {
     margin-left:1vw;
   }
 .theme {
-    font-size: 11px;
+    font-size: 12px;
+    letter-spacing: 1px;
     padding-top:0;
   }
 
   .name {
-    font-size: 10px;
+    font-size: 12px;
     color: #A8C692;
     position: absolute;
     font-family: "A1-light";
