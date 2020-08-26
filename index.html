@@ -169,13 +169,17 @@
         
         <div class="contact-wrapper">
           
-          <form>      
-            <input name="name" type="text" class="feedback-input" placeholder="年齢" /> 
+          <form action="https://api.staticforms.xyz/submit" method="post">    
+            <input name="name" type="text" class="feedback-input" placeholder="ご職業" /> 
             <textarea name="text" class="feedback-input" placeholder="感想をかく"></textarea>
-            <input type="submit" value="送信する"/>
-            <input type="hidden" NAME="_to" VALUE="mailto:kaedechikakiyo@gmail.com">
             <input type="hidden" NAME="_subject" VALUE="COCOCHI 感想">
             <input type="hidden" name="scroll_top" value="" class="contact">
+            <!-- アクセスキー -->
+        　　 <input　type="hidden"　name="accessKey"　value="9e2daa62-1f5e-4fc6-ac98-b30687ded384"/>
+            <!-- リダイレクト先 -->
+            <input type="hidden" name="redirectTo" value="https://geikou-takuten.com/"/>
+
+            <input type="submit" value="送信する"/>
           </form>
           
         </div>
