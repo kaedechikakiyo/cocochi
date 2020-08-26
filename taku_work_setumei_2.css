@@ -452,7 +452,8 @@ flex-wrap:wrap; /*折り返して配置*/
 .work{
   width: 100vw;
   height:100%;
-  margin-bottom:2vh;
+  margin:0 auto;
+  margin-bottom:10vh;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -464,6 +465,15 @@ flex-wrap:wrap; /*折り返して配置*/
   height:100%;
   object-fit:cover /*ボックスに合わせてリサイズ*/
 }
+
+.work p {
+  font-size: 14px;
+  color: #5A5A5A;
+  position: absolute;
+  font-family: "A1-light";
+  letter-spacing: 1px;
+  margin-left: 0;
+ }
 
 
 
