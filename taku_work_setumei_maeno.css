@@ -493,6 +493,11 @@ footer {
   width: 100%;
 }
 
+_::-webkit-full-page-media, _:future, :root .css_selector
+.scroll-top {
+  margin-right:160px;
+}
+
  
  .officialsite{
   position: absolute;

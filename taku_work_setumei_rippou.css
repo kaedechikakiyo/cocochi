@@ -479,9 +479,9 @@ flex-wrap:wrap; /*折り返して配置*/
 }
 
 .caption{
-    font-size: 1６px;
+    font-size: 16px;
     font-family: "A1-light";
-    line-height:18px;
+    line-height:26px;
     animation-name: fadein;
     animation-duration: 2s;
  }
@@ -616,6 +616,11 @@ footer {
 .scroll-top img {
   display: block;
   width: 100%;
+}
+
+_::-webkit-full-page-media, _:future, :root .css_selector
+.scroll-top {
+  margin-right:160px;
 }
 
  
