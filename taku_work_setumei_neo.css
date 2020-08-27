@@ -647,6 +647,10 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     margin-right:30px;
     margin-bottom:2px;
   }
+
+  _::-webkit-full-page-media, _:future, :root .scroll-top {
+    margin-right:60px;
+  }
   
   .scroll-top img {
     display: block;
