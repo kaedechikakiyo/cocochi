@@ -210,7 +210,7 @@ main{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
   margin:0 15vw 250px;
-  padding-top:71vh;
+  padding-top:75vh;
   justify-content:space-between;
 }
 
@@ -241,7 +241,7 @@ flex-wrap:wrap; /*折り返して配置*/
     flex-wrap:wrap; /*折り返して配置*/
     justify-content:space-between;
     margin:0 0 130px;
-    padding-top:71vh;
+    padding-top:75vh;
   }
 }
 
