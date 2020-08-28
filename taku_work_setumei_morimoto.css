@@ -470,8 +470,9 @@ flex-wrap:wrap; /*折り返して配置*/
   font-size: 18px;
   font-family: "A1-light";
   font-weight: 600;
-  padding-top: 25px;
+  padding-top: 15px;
   padding-bottom: 20px;
+  padding-left: 38px;
   line-height:18px;
   letter-spacing: 0.3px;
   animation-name: fadein;
@@ -482,6 +483,7 @@ flex-wrap:wrap; /*折り返して配置*/
   font-size: 16px;
   font-family: "A1-light";
   line-height:26px;
+  padding-left: 38px;
   animation-name: fadein;
   animation-duration: 2s;
 }
@@ -489,7 +491,7 @@ flex-wrap:wrap; /*折り返して配置*/
 .movie-wrap{
   background-color: black;
   width: 100%;
-  height: 500px;
+  height: 700px;
   margin-bottom: 15px;
   align-items: center;
 
@@ -507,39 +509,40 @@ video {
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
 
     .caption1{
-        font-size: 18px;
+        font-size: 22px;
         font-family: "A1-light";
         font-weight: 600;
-        padding-top: 25px;
-        padding-bottom: 20px;
-        line-height:18px;
+        padding-top:50px;
+        padding-bottom: 30px;
+        padding-left: 0px;
         letter-spacing: 0.3px;
         animation-name: fadein;
         animation-duration: 2s;
-        margin:0 15vw;
+        margin:0 13vw;
     }
     
     .caption{
-        font-size: 1６px;
+        font-size: 18px;
         font-family: "A1-light";
-        line-height:18px;
+        line-height:25px;
+        padding-left: 0px;
         animation-name: fadein;
         animation-duration: 2s;
-        margin:0 15vw;
+        margin:0 13vw;
      }
     
      .movie-wrap{
         background-color: black;
         width: 100%;
-        height: 500px;
+        height: 1000px;
         margin-bottom: 15px;
         align-items: center;
       
       }
     
       video {
-        margin-left:26vw;
-        width: 50%;
+        margin-left:20vw;
+        width: 60%;
         height: 100%;
       }}
 
@@ -564,6 +567,7 @@ video {
     padding-top: 15px;
     padding-bottom: 10px;
     margin:0 30px;
+    padding-left: 0;
     line-height:18px;
     letter-spacing: 0.3px;
     animation-name: fadein;
@@ -575,20 +579,21 @@ video {
     font-family: "A1-light";
     line-height:18px;
     margin:0 30px;
+    padding-left: 0;
     animation-name: fadein;
     animation-duration: 2s;
  }
  .movie-wrap{
     background-color: black;
     width: 100%;
-    height: 330px;
+    height: 400px;
     margin-bottom: 15px;
   
   }
 
   video {
-    margin-left:25vw;
-    width: 50%;
+    margin-left:15vw;
+    width: 70%;
     height: 100%;
   }
   }
@@ -739,7 +744,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
   }
 
   _::-webkit-full-page-media, _:future, :root .scroll-top {
-    margin-right:60px;
+    margin-right:70px;
   }
   
   .scroll-top img {

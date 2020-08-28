@@ -876,6 +876,10 @@ textarea {
       width: 100%;
     }
     
+    _::-webkit-full-page-media, _:future, :root .scroll-top {
+      margin-right:70px;
+    }
+    
     .copyright {
       color: gray;
       position: absolute;
