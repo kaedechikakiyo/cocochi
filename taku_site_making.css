@@ -203,28 +203,26 @@
   }
 
 
-main{
+.some{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
   margin:0 15vw;
   padding-top:45vh;
-  padding-bottom:30vh;
   justify-content:space-between;
   
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
-  main{
+  .some{
     padding-top:32vh;
   }
 }
 
 @media screen and (max-width: 767px) {
-  main{
+  .some{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
     padding-top:45vh;
-    padding-bottom:20vh;
     margin:1vh 12vw;
     justify-content:space-between;
   }
@@ -358,6 +356,56 @@ main{
   }
 
 
+  .shibori{
+    display:flex;
+    flex-wrap:wrap; /*折り返して配置*/
+    margin:0 15vw;
+    padding-top:13vh;
+    justify-content:space-between;
+    
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px){ 
+    .shibori{
+      padding-top:5vh;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .shibori{
+      display:flex;
+      flex-wrap:wrap; /*折り返して配置*/
+      padding-top:7vh;
+      margin:1vh 12vw;
+      justify-content:space-between;
+    }
+  }
+
+  .print{
+    display:flex;
+    flex-wrap:wrap; /*折り返して配置*/
+    margin:0 15vw;
+    padding-top:14vh;
+    justify-content:space-between;
+    
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px){ 
+    .print{
+      padding-top:5vh;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .print{
+      display:flex;
+      flex-wrap:wrap; /*折り返して配置*/
+      padding-top:7vh;
+      margin:1vh 12vw;
+      justify-content:space-between;
+    }
+  }
+
 .work{
   width: 22vw;
   height:100%;
@@ -375,14 +423,12 @@ main{
   object-fit:cover /*ボックスに合わせてリサイズ*/
 }
 
-
 .work p {
   font-size: 13px;
   color: gray;
   position: absolute;
   font-family: "A1-light";
   line-height: 17px;
-  padding-top:0.2vh;
   letter-spacing: 2px;
 }
 
@@ -390,11 +436,44 @@ main{
   color: #A8C692;
  }
 
- video{
-   margin-top: 80px;
-   animation-name: fadein;
-   animation-duration: 3s;
- }
+ .youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56%;
+  margin-top:180px;
+  margin-bottom:150px;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% ;
+  height: 100% ;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+  .youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+    margin-top:100px;
+    margin-bottom:110px;
+    animation-name: fadein;
+    animation-duration: 3s;
+  }
+  
+  .youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100% ;
+  }
+} 
 
 
 @media screen and (max-width: 767px) {
@@ -407,8 +486,25 @@ main{
     font-size: 11px;
     margin-left:1vw;
   }
-  
+
+  .youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+    margin-top:70px;
+    margin-bottom:110px;
+    animation-name: fadein;
+    animation-duration: 3s;
   }
+  
+  .youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100% ;
+  }
+}
 
 /* ここからフッター */
 footer {
@@ -508,9 +604,10 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
       margin-right:30px;
     }
 
-  _::-webkit-full-page-media, _:future, :root .scroll-top {
-    margin-right:70px;
-  }
+    _::-webkit-full-page-media, _:future, :root .scroll-top {
+      margin-right:160px;
+    }
+    
   
   .scroll-top img {
     display: block;

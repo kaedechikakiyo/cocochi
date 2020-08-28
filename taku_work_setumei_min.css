@@ -513,6 +513,7 @@ flex-wrap:wrap; /*折り返して配置*/
     object-fit:cover /*ボックスに合わせてリサイズ*/
   }
   
+  
   @media screen and (max-width: 767px) {
     .scrolly{
       width:100%;
