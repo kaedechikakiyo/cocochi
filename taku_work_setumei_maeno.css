@@ -483,7 +483,7 @@ footer {
   width:3vw;
   text-decoration: none;
   color: #231300;
-  margin-top:300px;
+  margin-top:330px;
   margin-right:80px;
 }
 
@@ -576,15 +576,14 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     letter-spacing: 1px;
     font-size: 11px;
     }
-  
-  .scroll-top {
-    width:8vw;
-    text-decoration: none;
-    color: #231300;
-    margin-top:260px;
-    margin-right:30px;
-    margin-bottom:2px;
-  }
+
+    .scroll-top {
+      width:9vw;
+      text-decoration: none;
+      color: #231300;
+      margin-top:265px;
+      margin-right:30px;
+    }
 
   _::-webkit-full-page-media, _:future, :root .scroll-top {
     margin-right:70px;
