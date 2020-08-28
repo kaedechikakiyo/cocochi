@@ -241,7 +241,7 @@ flex-wrap:wrap; /*折り返して配置*/
     flex-wrap:wrap; /*折り返して配置*/
     justify-content:space-between;
     margin:0 0 130px;
-    padding-top:75vh;
+    padding-top:80vh;
   }
 }
 
@@ -470,7 +470,7 @@ flex-wrap:wrap; /*折り返して配置*/
   font-size: 18px;
   font-family: "A1-light";
   font-weight: 600;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 38px;
   line-height:18px;
@@ -486,6 +486,21 @@ flex-wrap:wrap; /*折り返して配置*/
   padding-left: 38px;
   animation-name: fadein;
   animation-duration: 2s;
+}
+
+.caption a{
+  width: 160px;
+  height: 40px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "A1-light";
+  border: solid 1px #231300; /*一重の線*/
+  display: flex;
+  align-items: center;
+  justify-content: center; /*この３列で上下中央ぞろえ*/
+  float:left;
+  margin-top:15px;
 }
 
 
@@ -551,7 +566,23 @@ flex-wrap:wrap; /*折り返して配置*/
     padding-left: 0;
     animation-name: fadein;
     animation-duration: 2s;
+    padding-bottom: 20px;
  }
+
+ .caption a{
+  width: 120px;
+  height: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "A1-light";
+  border: solid 1px #231300; /*一重の線*/
+  display: flex;
+  align-items: center;
+  justify-content: center; /*この３列で上下中央ぞろえ*/
+  float:left;
+  margin-top:10px;
+}
 
   }
 

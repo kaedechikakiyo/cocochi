@@ -379,8 +379,7 @@ main{
   color: gray;
   position: absolute;
   font-family: "A1-light";
-  line-height: 17px;
-  padding-top:0.2vh;
+  line-height: 19px;
   letter-spacing: 0.8px;
 }
 
@@ -397,6 +396,7 @@ main{
     margin-left:1vw;
   }
   .work p {
+    line-height: 16px;
     font-size: 11px;
     margin-left:1vw;
   }

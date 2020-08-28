@@ -546,14 +546,15 @@ h2 {
 .free{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:1vh 14vw;
+  margin:0 14vw;
   padding-top:45vh;
+  padding-bottom:0;
   justify-content:space-between;
 }
 
 .midashi2 {
   position:absolute; 
-  top: 269vh;
+  top: 271vh;
   left: 15vw;
   box-sizing:border-box;
 }
@@ -567,7 +568,7 @@ h2 {
   font-size: 16px;
   font-family: "A1-light"; 
   position:absolute;
-  top: 269vh;
+  top: 271vh;
   left: 22vw;
   text-decoration: none;
   color: #323232;

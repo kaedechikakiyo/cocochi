@@ -452,7 +452,7 @@ flex-wrap:wrap; /*折り返して配置*/
 .work{
   width: 100vw;
   height:100%;
-  margin-bottom:80px;
+  margin-bottom:40px;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -483,7 +483,7 @@ flex-wrap:wrap; /*折り返して配置*/
   .work{
     width: 100%;
     height:100%;
-    margin-bottom:8vh;
+    margin-bottom:15px;
   }
 
   .work img {

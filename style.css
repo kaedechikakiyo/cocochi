@@ -343,8 +343,8 @@ input {
 
 textarea {
   text-decoration-line: none;
-  height: 250px;
-  width:64vw;
+  height: 300px;
+  width:60vw;
   line-height: 150%;
   resize:vertical;
 
@@ -376,7 +376,7 @@ textarea {
   border-radius: 3px;
 }
 
-/*[type="submit"]:hover { }*/
+[type="submit"]:hover { opacity: 0.8;}
 
 
 
