@@ -386,6 +386,7 @@
     flex-wrap:wrap; /*折り返して配置*/
     margin:0 15vw;
     padding-top:14vh;
+    padding-bottom:180px;
     justify-content:space-between;
     
   }
@@ -401,6 +402,7 @@
       display:flex;
       flex-wrap:wrap; /*折り返して配置*/
       padding-top:7vh;
+      padding-bottom:120px;
       margin:1vh 12vw;
       justify-content:space-between;
     }
@@ -440,7 +442,7 @@
   position: relative;
   width: 100%;
   padding-top: 56%;
-  margin-top:180px;
+  margin-top:10px;
   margin-bottom:150px;
   animation-name: fadein;
   animation-duration: 3s;
@@ -460,7 +462,7 @@
     position: relative;
     width: 100%;
     padding-top: 56%;
-    margin-top:100px;
+    margin-top:10px;
     margin-bottom:110px;
     animation-name: fadein;
     animation-duration: 3s;
@@ -491,8 +493,8 @@
     position: relative;
     width: 100%;
     padding-top: 56%;
-    margin-top:70px;
-    margin-bottom:110px;
+    margin-top:10px;
+    margin-bottom:80px;
     animation-name: fadein;
     animation-duration: 3s;
   }
@@ -605,7 +607,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     }
 
     _::-webkit-full-page-media, _:future, :root .scroll-top {
-      margin-right:160px;
+      margin-right:100px;
     }
     
   

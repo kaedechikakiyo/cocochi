@@ -210,7 +210,7 @@ main{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
   margin:0 15vw 250px;
-  padding-top:75vh;
+  padding-top:81vh;
   justify-content:space-between;
 }
 
@@ -230,7 +230,7 @@ flex-wrap:wrap; /*折り返して配置*/
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
     justify-content:space-between;
-    padding-top:50vh;
+    padding-top:55vh;
     padding-bottom:150px;
   }
 }
@@ -241,7 +241,7 @@ flex-wrap:wrap; /*折り返して配置*/
     flex-wrap:wrap; /*折り返して配置*/
     justify-content:space-between;
     margin:0 0 130px;
-    padding-top:80vh;
+    padding-top:84vh;
   }
 }
 
@@ -263,7 +263,7 @@ flex-wrap:wrap; /*折り返して配置*/
   .midashi {
     position:absolute; 
     top: 22vh;
-    left: 13vw;
+    left: 12vw;
       box-sizing:border-box;
    }
    
@@ -277,7 +277,7 @@ flex-wrap:wrap; /*折り返して配置*/
   .midashi {
     position:absolute; 
     top: 14vh;
-    left: 15vw;
+    left: 13vw;
       box-sizing:border-box;
    }
    
@@ -403,10 +403,10 @@ flex-wrap:wrap; /*折り返して配置*/
       font-weight: 600;
       position:absolute;
       top: 13.7vh;
-      left: 22vw;
+      left: 19vw;
       text-decoration: none;
       color: #323232;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.05px;
       font-style:italic;
     }
 

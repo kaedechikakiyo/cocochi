@@ -210,7 +210,7 @@ main{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
   margin:0 15vw 250px;
-  padding-top:78vh;
+  padding-top:80vh;
   justify-content:space-between;
 }
 
@@ -230,7 +230,7 @@ flex-wrap:wrap; /*折り返して配置*/
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
     justify-content:space-between;
-    padding-top:50vh;
+    padding-top:60vh;
     padding-bottom:150px;
   }
 }
@@ -241,7 +241,7 @@ flex-wrap:wrap; /*折り返して配置*/
     flex-wrap:wrap; /*折り返して配置*/
     justify-content:space-between;
     margin:0 0 130px;
-    padding-top:80vh;
+    padding-top:84vh;
   }
 }
 
@@ -453,7 +453,7 @@ flex-wrap:wrap; /*折り返して配置*/
   width: 100vw;
   height:100%;
   margin:0 auto;
-  margin-bottom:7px;
+  margin-bottom:5vh;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -481,7 +481,7 @@ flex-wrap:wrap; /*折り返して配置*/
   .work{
     width: 100%;
     height:100%;
-    margin-bottom:7px;
+    margin-bottom:20px;
   }
 
   .work img {
