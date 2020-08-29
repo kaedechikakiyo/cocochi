@@ -379,19 +379,6 @@
       margin:1vh 12vw;
       justify-content:space-between;
     }
-
-    .shibori p{
-      font-size: 16px;
-      font-family: "A1-light"; 
-      font-weight: 600;
-      position:absolute;
-      top: 80vh;
-      left: 22vw;
-      text-decoration: none;
-      color: #323232;
-      letter-spacing: 0.05em;
-      font-style:italic;
-    }
     }
 
 
@@ -441,17 +428,16 @@
 }
 
 .work p {
-  font-size: 13px;
-  color: gray;
+  font-size: 15px;
+  padding: 18px;
+  color: white;
   position: absolute;
   font-family: "A1-light";
   line-height: 17px;
   letter-spacing: 2px;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
-
-.work p:first-letter{
-  color: #A8C692;
- }
 
  .youtube {
   position: relative;
@@ -501,7 +487,9 @@
   }
   .work p {
     font-size: 11px;
-    margin-left:1vw;
+    padding:5px;
+    margin-left: 3px;
+    letter-spacing: 0.5px;
   }
 
   .youtube {
@@ -509,7 +497,7 @@
     width: 100%;
     padding-top: 56%;
     margin-top:10px;
-    margin-bottom:50px;
+    margin-bottom:70px;
     animation-name: fadein;
     animation-duration: 3s;
   }
