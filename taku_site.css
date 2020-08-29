@@ -373,7 +373,6 @@ h1 {
   height:100%;
   margin-bottom:9vh;
   margin-left:1vw;
-  border-radius: 20px;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -685,16 +684,12 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     }
   
     .scroll-top {
-      width:9vw;
+      width:10vw;
       text-decoration: none;
       color: #231300;
       margin-top:265px;
-      margin-right:30px;
+      margin-right:45px;
     }
-  
-  _::-webkit-full-page-media, _:future, :root .scroll-top {
-    margin-right:70px;
-  }
   
   .scroll-top img {
     display: block;

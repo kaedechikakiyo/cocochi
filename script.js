@@ -96,4 +96,8 @@ $(function(){
     });
 });
 
+$(function() {
+  $('.single-item').slick(); 
+});
+
 
