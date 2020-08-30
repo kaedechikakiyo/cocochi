@@ -215,7 +215,7 @@
 .pattern{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:22vh 15vw 50px;
+  margin:22vh 15vw 100px;
   /* padding-top:45vh; */
   justify-content:space-between;
 }
@@ -255,6 +255,8 @@ margin-bottom: 60px;
   height: 4vw;
   margin-right: 5px;
   object-fit:contain; /*ボックスに合わせてリサイズ*/
+  animation-name: fadein;
+  animation-duration: 3s;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
@@ -286,6 +288,8 @@ h1 {
   animation-name: fadein;
   animation-duration: 3s;
   font-style:italic;
+  animation-name: fadein;
+  animation-duration: 3s;
 }
 
 .about {
@@ -302,8 +306,6 @@ h1 {
   color: #323232;
   letter-spacing: 0.05em;
   line-height:25px; /*行の高さを指定*/
-  animation-name: fadein;
-  animation-duration: 3s;
   margin-bottom: 55px;
   animation-name: fadein;
   animation-duration: 3s;
@@ -322,9 +324,6 @@ h1 {
 
 
   @media screen and (max-width: 767px) {
-    h1 {
-
-    }
   
     .about {
       font-size: 12px;
@@ -389,9 +388,6 @@ h1 {
   object-fit:cover /*ボックスに合わせてリサイズ*/
 }
 
-.work:hover img{
-  opacity: 0.7;
-}
 
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
@@ -413,6 +409,32 @@ h1 {
   }
 }
 
+
+.free{
+  display:flex;
+  flex-wrap:wrap; /*折り返して配置*/
+  margin:22vh 15vw 300px;
+  /* padding-top:45vh; */
+  justify-content:space-between;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+  .free{
+    display:flex;
+    flex-wrap:wrap; /*折り返して配置*/
+    margin:13vh 14vw 0;
+    justify-content:space-between;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .free{
+    display:flex;
+    flex-wrap:wrap; /*折り返して配置*/
+    margin:10vh 14vw 80px;
+    justify-content:space-between;
+  }
+}
 
 
 h2 {

@@ -100,4 +100,27 @@ $(function() {
   $('.single-item').slick(); 
 });
 
+(function($){
 
+  $(function(){
+     $(window).scroll(function(){
+        var scr = $(window).scrollTop();
+        if(scr > 1){
+           $('.header-logo-wrap').addClass('mini');
+        }else{
+           $('.header-logo-wrap').removeClass('mini');
+        }
+     })
+  })
+  })(jQuery);
+
+  var mvh = $('.main-visual').height();
+
+  $(window).scroll(function() {
+    var top = $(window).scrollTop();
+    if (mvh < top) {
+      $('header').css('background-color', 'white');
+      } else {
+      $('header').css('background-color', 'transparent');
+    }
+  });
