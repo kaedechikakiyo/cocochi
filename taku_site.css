@@ -588,6 +588,32 @@ h2 {
   letter-spacing: 0.07em;
   line-height:18px; /*行の高さを指定*/
   }
+
+  _::-webkit-full-page-media, _:future, :root h2 {
+    font-size: 16px;
+    font-family: "A1-light"; 
+    position:absolute;
+    top: 276vh;
+    left: 22vw;
+    text-decoration: none;
+    color: #323232;
+    letter-spacing: 0.05em;
+    font-style:italic;
+  }
+  
+  _::-webkit-full-page-media, _:future, :root .about2 {
+    font-size: 12px;
+    font-family: "A1-light";
+    position:absolute;
+    top: 288vh;
+    left: 16vw;
+    right: 14vw;
+    text-decoration: none;
+    color: #323232;
+    letter-spacing: 0.07em;
+    line-height:18px; /*行の高さを指定*/
+    }
+
 }
 
 

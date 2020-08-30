@@ -286,11 +286,16 @@ body {
   flex-direction: row; /*配置が左右逆*/
  }
 
+ iframe{
+   padding-top:40px;
+   width:50%;
+ }
+
  /* Begin Left Contact Page */
 #contact {
   width: 100%;
   overflow: hidden;
-  padding-top:100px;
+  padding-top:70px;
   padding-bottom: 180px;
 }
 
@@ -564,6 +569,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
 .what-list-caption p{
   font-size: 15px;
   margin-left: 31px;
+  margin-bottom:20px;
 }
 
 .what-list-caption a{
@@ -592,6 +598,11 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     padding-top:60px;
     padding-bottom: 150px;
     margin:0 auto;
+  }
+
+  iframe{
+    padding-top:30px;
+    width:70%;
   }
 }
 
@@ -701,12 +712,12 @@ header{
 
 .what-list li{
   flex-direction: column; /*積み重なるように配置する*/
-  margin-bottom:50px;
+  margin-bottom:40px;
 }
 
 .what-list-img-wrap{
   width: 100vw;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 
@@ -761,11 +772,16 @@ header{
       float: right;
 }
 
+iframe{
+  padding-top:30px;
+  width:100%;
+}
+
 
  /* Begin Left Contact Page */
  #contact {
   width: 70vw;
-  padding-top:60px;
+  padding-top:30px;
   padding-bottom: 150px;
   margin:0 auto;
 }

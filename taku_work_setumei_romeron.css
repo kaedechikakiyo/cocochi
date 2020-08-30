@@ -508,7 +508,7 @@ flex-wrap:wrap; /*折り返して配置*/
   .scrolly{
     margin:0 5vw;
     width:60vw;
-    height:800px;
+    height:1000px;
     margin-top: 80px;
     overflow-y:scroll;
     animation-name: fadein;
