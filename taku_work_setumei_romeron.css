@@ -594,7 +594,8 @@ footer {
 }
 
 _::-webkit-full-page-media, _:future, :root .scroll-top {
-  margin-right:160px;
+  position: relative;
+  left:95vw;
 }
 
  
@@ -682,8 +683,14 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
       text-decoration: none;
       color: #231300;
       margin-top:265px;
-      margin-right:45px;
+      margin-right:35px;
     }
+
+    _::-webkit-full-page-media, _:future, :root .scroll-top {
+      position: relative;
+      left:84vw;
+    }
+    
   .scroll-top img {
     display: block;
     width: 100%;
