@@ -215,8 +215,8 @@
 .pattern{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:0 15vw;
-  padding-top:45vh;
+  margin:22vh 15vw 50px;
+  /* padding-top:45vh; */
   justify-content:space-between;
 }
 
@@ -224,8 +224,7 @@
   .pattern{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:1vh 14vw;
-    padding-top:30vh;
+    margin:13vh 14vw 0;
     justify-content:space-between;
   }
 }
@@ -234,136 +233,103 @@
 .pattern{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:1vh 14vw;
-    padding-top:41vh;
+    margin:10vh 14vw 100px;
     justify-content:space-between;
   }
 }
 
 .midashi {
- position:absolute; 
+ /* position:absolute; 
  top: 23vh;
  left: 15vw;
-box-sizing:border-box;
+box-sizing:border-box; */
 animation-name: fadein;
 animation-duration: 3s;
+display: flex;
+align-items: center;
+margin-bottom: 60px;
 }
 
 .midashi img {
   width:3vw;
-  object-fit:cover /*ボックスに合わせてリサイズ*/
+  height: 4vw;
+  margin-right: 5px;
+  object-fit:contain; /*ボックスに合わせてリサイズ*/
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
-.midashi {
-  position:absolute; 
-  top: 22vh;
-  left: 14vw;
-  box-sizing:border-box;
-  
-}
    
 .midashi img {
   width:4vw;
-  object-fit:cover /*ボックスに合わせてリサイズ*/
+  object-fit:contain; /*ボックスに合わせてリサイズ*/
   }
 }
   
 @media screen and (max-width: 767px) {
-.midashi {
-  position:absolute; 
-  top: 14vh;
-  left: 15vw;
-  box-sizing:border-box;
-}
    
 .midashi img {
-  width:6vw;
-  object-fit:cover /*ボックスに合わせてリサイズ*/
+  width:8vw;
+  height: 6vw;
+  object-fit:contain; /*ボックスに合わせてリサイズ*/
   }
 }
 
 h1 {
   font-size: 20px;
   font-family: "A1-light"; 
-  font-weight: 600;
-  position:absolute;
+  /* position:absolute;
   top: 23vh;
-  left: 18vw;
+  left: 18vw; */
   text-decoration: none;
   color: #323232;
   letter-spacing: 0.05em;
   animation-name: fadein;
   animation-duration: 3s;
+  font-style:italic;
 }
 
 .about {
   font-size: 16px;
   font-family: "A1-light"; 
-  position:absolute;
+  /* position:absolute;
   top: 40vh;
   left: 16vw;
-  right:24vw;
+  right:24vw; */
+
+  margin-left:10px;
+  margin-right:70px;
   text-decoration: none;
   color: #323232;
   letter-spacing: 0.05em;
   line-height:25px; /*行の高さを指定*/
   animation-name: fadein;
   animation-duration: 3s;
+  margin-bottom: 55px;
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
-h1 {
-  font-size: 22px;
-  font-family: "A1-light"; 
-  font-weight: 600;
-  position:absolute;
-  top: 22vh;
-  left: 19vw;
-  text-decoration: none;
-  color: #323232;
-  letter-spacing: 0.05em;
-  font-style:italic;
- }
-
-.about {
-  font-size: 16px;
-  font-family: "A1-light";
-  position:absolute;
-  top: 30vh;
-  left: 17vw;
-  right: 17vw;
-  text-decoration: none;
-  color: #323232;
-  letter-spacing: 0.07em;
-  line-height:24px; /*行の高さを指定*/
+  .about {
+    font-size: 12px;
+    margin-right:0;
+    letter-spacing: 0.07em;
+    line-height:18px; /*行の高さを指定*/
+    margin-bottom: 90px;
   }
 }
+
 
   @media screen and (max-width: 767px) {
     h1 {
       font-size: 16px;
-      font-family: "A1-light"; 
-      position:absolute;
-      top: 13.7vh;
-      left: 22vw;
-      text-decoration: none;
-      color: #323232;
-      letter-spacing: 0.05em;
-      font-style:italic;
     }
   
     .about {
       font-size: 12px;
-      font-family: "A1-light";
-      position:absolute;
-      top: 30vh;
-      left: 16vw;
-      right: 14vw;
-      text-decoration: none;
-      color: #323232;
+      margin-right:0;
       letter-spacing: 0.07em;
       line-height:18px; /*行の高さを指定*/
+      margin-bottom: 45px;
     }
   }
 
@@ -416,6 +382,15 @@ h1 {
   animation-duration: 1s;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+  .work{
+    width: 17vw;
+    height:100%;
+    margin-bottom:7vh;
+    margin-left:1vw;
+  }
+}
+
 
 @media screen and (max-width: 767px) {
 .work{
@@ -447,13 +422,11 @@ h1 {
 .free{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:0 15vw;
-  padding-top:45vh;
-  padding-bottom:14vh;
+  margin:14vh 15vw 14vh;
   justify-content:space-between;
 }
 
-.midashi2 {
+/* .midashi2 {
   position:absolute; 
   top: 209vh;
   left: 15vw;
@@ -464,15 +437,15 @@ h1 {
    
 .midashi2 img {
   width:3vw;
-  object-fit:cover /*ボックスに合わせてリサイズ*/
-}
+  object-fit:cover /*ボックスに合わせてリサイズ
+} */
 
 h2 {
   font-size: 20px;
   font-family: "A1-light"; 
-  position:absolute;
+  /* position:absolute;
   top: 210vh;
-  left: 18vw;
+  left: 18vw; */
   text-decoration: none;
   color: #323232;
   letter-spacing: 0.05em;
@@ -499,8 +472,7 @@ h2 {
   .free{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:1vh 14vw;
-    padding-top:30vh;
+    margin:200px 14vw 150px;
     justify-content:space-between;
   }
   
@@ -519,9 +491,9 @@ h2 {
   h2 {
     font-size: 16px;
     font-family: "A1-light"; 
-    position:absolute;
+    /* position:absolute;
     top: 127vh;
-    left: 22vw;
+    left: 22vw; */
     text-decoration: none;
     color: #323232;
     letter-spacing: 0.05em;
@@ -547,7 +519,6 @@ h2 {
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
   margin:0 14vw;
-  padding-top:45vh;
   padding-bottom:0;
   justify-content:space-between;
 }
@@ -567,9 +538,9 @@ h2 {
 h2 {
   font-size: 16px;
   font-family: "A1-light"; 
-  position:absolute;
+  /* position:absolute;
   top: 271vh;
-  left: 22vw;
+  left: 22vw; */
   text-decoration: none;
   color: #323232;
   letter-spacing: 0.05em;
