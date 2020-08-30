@@ -124,3 +124,14 @@ $(function() {
       $('header').css('background-color', 'transparent');
     }
   });
+
+  var mvh = $('.midashi').height();
+
+  $(window).scroll(function() {
+    var top = $(window).scrollTop();
+    if (mvh < top) {
+      $('header').css('background-color', 'white');
+      } else {
+      $('header').css('background-color', 'transparent');
+    }
+  });

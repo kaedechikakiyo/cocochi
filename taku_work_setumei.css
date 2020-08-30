@@ -50,6 +50,12 @@ body {
   margin-top:7vh;
 }
 
+.header-logo-wrap.mini {
+  width: 7vw !important;
+  margin-top:3vh;
+
+}
+
 .header-logo-wrap img {
   width: 100%;
   height: 100%;

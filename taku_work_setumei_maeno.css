@@ -56,6 +56,12 @@
   height: 100%;
 }
 
+.header-logo-wrap.mini {
+  width: 7vw !important;
+  margin-top:3vh;
+
+}
+
 .header-nav-list {
   list-style: none;
 }
