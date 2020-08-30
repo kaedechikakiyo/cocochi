@@ -29,6 +29,7 @@
     src: url(font/FOT-DNPShueiGoGinStd-L.otf);
   }
 
+  
 
   header {
     width: 100%;
@@ -205,6 +206,7 @@
   font-style: italic;
 }
 
+
 .header-sp-nav-list  a:hover {
   text-decoration: none;
   color: #A8C692;
@@ -243,6 +245,7 @@
     justify-content:space-between;
   }
 }
+
 
 .midashi {
  /* position:absolute; 
@@ -361,6 +364,7 @@ h1 {
     right: 0;
     width: 100% ;
     height: 100% ;
+    border-radius: 15px;
   }
   
   
@@ -380,7 +384,6 @@ h1 {
       height: 100% ;
     }
   } 
-
 
   
 .work{

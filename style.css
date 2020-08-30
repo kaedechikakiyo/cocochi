@@ -760,7 +760,7 @@ header{
     text-decoration: none;
     font-family: "A1-light",'interstate-mono, monospace';
     color:#231300;
-    border: solid 1px #231300; /*一重の線*/
+    border: 0px; /*一重の線*/
     display: flex;
     align-items: center;
     justify-content: center; /*この３列で上下中央ぞろえ*/
