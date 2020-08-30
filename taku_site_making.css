@@ -233,7 +233,7 @@
 .pattern{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:10vh 14vw 80px;
+    margin:10vh 14vw 50px;
     justify-content:space-between;
   }
 }
@@ -275,6 +275,7 @@ margin-bottom: 60px;
   object-fit:contain; /*ボックスに合わせてリサイズ*/
   }
 }
+
 
 h1 {
   font-size: 20px;
@@ -325,6 +326,10 @@ h1 {
 
   @media screen and (max-width: 767px) {
   
+    h1 {
+      font-size: 16px;
+      font-family: "A1-light"; 
+    }
     .about {
       font-size: 12px;
       margin-right:0;
@@ -369,6 +374,7 @@ h1 {
       height: 100% ;
     }
   } 
+
 
   
 .work{
@@ -497,6 +503,7 @@ h2 {
 @media screen and (max-width: 767px) {
 
 h2 {
+  margin-left:12px;
   font-size: 16px;
   margin-bottom: 20px;
   font-style:italic;
