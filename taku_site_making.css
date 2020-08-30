@@ -37,8 +37,8 @@
     justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
     align-items: center;
     padding: 0 3vw;
-    
-    position: relative;
+   
+    position: relative; /*固定*/
     z-index: 2; /*重ね順*/
   }
   
@@ -58,6 +58,15 @@
 
 .header-nav-list {
   list-style: none;
+}
+
+/*iPad用 画面の幅が480px以下の時は下のコードが反映される*/
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+
+  .header-logo-wrap {
+    width: 15vw;
+    margin-top:3vh;
+  }
 }
 
 .header-nav-list li {
@@ -91,8 +100,6 @@
 }
 
 
-
-
 .header-sp-icon-wrap{
   display: none;
 }
@@ -122,299 +129,254 @@
   }
 
   
-  .header-sp-icon-wrap{
-    width: 20px;
-    height: 20px;
-    display: flex;
-    flex-direction: column; /*縦並び*/
-    align-items: center; /*垂直方向に整列*/
-    justify-content: space-around; /*線同士の間隔が確保される*/
-    z-index: 100;
-  }
-  
-  .header-sp-icon-bar1,
-  .header-sp-icon-bar2,
-  .header-sp-icon-bar3{
-    position: relative;
-    width: 100%;
-    height: 1px;
-    background-color: #231300;
-    border-radius: 1px; /*線が丸くなる*/
-    transform-origin: left; /*起点の設定・線の左端が起点になる*/
-    transition: all 0.3s ease-out; /*all変化するすべてのプロパティに適用*/
-  }
-  
-  .is-open .header-sp-icon-bar1{ /*is-openのなかの子要素、開いてる時の棒*/
-    transform: rotate(45deg); /*大きさや回転などの変化を制御する/45度*/
-    
-  }
-  
-  .is-open .header-sp-icon-bar2{ 
-    transform: scale(0); /*消す*/
-  }
-  
-  .is-open .header-sp-icon-bar3{ 
-    transform: rotate(-45deg);
-  }
-  
-  
-  .header-sp-nav{
-    position: fixed; /*どの位置で開いても画面を覆い尽くす＋スクロールしない*/
-    width:100vw;
-    height: 100vh; /*画面いっぱいのサイズに*/
-    top:0;
-    left:0; /*一番上ぴったり＋一番左ぴったり*/
-    background-color: #bedba8;
-    display: none; /*通常は表示されない、jsで指定*/
-  }
-  
-  .header-sp-nav-list{
-    padding-top:20vh;
-    margin:auto; /*左右中央に配置*/
-    list-style: none;
-  }
-  
-  
-  .header-sp-nav-list li{
-    margin-bottom: 18px;
-  }
-  
-  .header-sp-nav-list a{
-    font-family: "A1-light";
-    font-weight: 600;
-    font-size: 16px;
-    color: white; /*aタグは色指定しないと訪問済みリンクになる*/
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    font-style: italic;
-  }
-  
-  .header-sp-nav-list  a:hover {
-    text-decoration: none;
-    color: #A8C692;
-    font-size: 16px;
-    /*letter-spacing: 0.05em; /*文字間*/
-    font-family: "A1-light";
-    font-style: italic;
-   }
-  }
+.header-sp-icon-wrap{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column; /*縦並び*/
+  align-items: center; /*垂直方向に整列*/
+  justify-content: space-around; /*線同士の間隔が確保される*/
+  z-index: 100;
+}
 
+.header-sp-icon-bar1,
+.header-sp-icon-bar2,
+.header-sp-icon-bar3{
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #231300;
+  border-radius: 1px; /*線が丸くなる*/
+  transform-origin: left; /*起点の設定・線の左端が起点になる*/
+  transition: all 0.3s ease-out; /*all変化するすべてのプロパティに適用*/
+}
 
-.some{
-  display:flex;
-  flex-wrap:wrap; /*折り返して配置*/
-  margin:0 15vw;
-  padding-top:45vh;
-  justify-content:space-between;
+.is-open .header-sp-icon-bar1{ /*is-openのなかの子要素、開いてる時の棒*/
+  transform: rotate(45deg); /*大きさや回転などの変化を制御する/45度*/
   
 }
 
+.is-open .header-sp-icon-bar2{ 
+  transform: scale(0); /*消す*/
+}
+
+.is-open .header-sp-icon-bar3{ 
+  transform: rotate(-45deg);
+}
+
+
+.header-sp-nav{
+  position: fixed; /*どの位置で開いても画面を覆い尽くす＋スクロールしない*/
+  width:100vw;
+  height: 100vh; /*画面いっぱいのサイズに*/
+  top:0;
+  left:0; /*一番上ぴったり＋一番左ぴったり*/
+  background-color: #bedba8;
+  display: none; /*通常は表示されない、jsで指定*/
+}
+
+.header-sp-nav-list{
+  padding-top:20vh;
+  margin:auto; /*左右中央に配置*/
+  list-style: none;
+}
+
+
+.header-sp-nav-list li{
+  margin-bottom: 18px;
+}
+
+.header-sp-nav-list a{
+  font-family: "A1-light";
+  font-weight: 600;
+  font-size: 16px;
+  color: white; /*aタグは色指定しないと訪問済みリンクになる*/
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-style: italic;
+}
+
+.header-sp-nav-list  a:hover {
+  text-decoration: none;
+  color: #A8C692;
+  font-size: 16px;
+  /*letter-spacing: 0.05em; /*文字間*/
+  font-family: "A1-light";
+  font-style: italic;
+ }
+}
+
+
+/*前半制作*/
+
+.pattern{
+  display:flex;
+  flex-wrap:wrap; /*折り返して配置*/
+  margin:22vh 15vw 50px;
+  /* padding-top:45vh; */
+  justify-content:space-between;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
-  .some{
-    padding-top:32vh;
+  .pattern{
+    display:flex;
+    flex-wrap:wrap; /*折り返して配置*/
+    margin:13vh 14vw 0;
+    justify-content:space-between;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .some{
+.pattern{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    padding-top:45vh;
-    margin:1vh 12vw;
+    margin:10vh 14vw 80px;
     justify-content:space-between;
   }
 }
 
 .midashi {
- position:absolute; 
- top: 22vh;
+ /* position:absolute; 
+ top: 23vh;
  left: 15vw;
-   box-sizing:border-box;
-   animation-name: fadein;
-   animation-duration: 3s;
+box-sizing:border-box; */
+animation-name: fadein;
+animation-duration: 3s;
+display: flex;
+align-items: center;
+margin-bottom: 60px;
 }
 
 .midashi img {
   width:3vw;
-  object-fit:cover /*ボックスに合わせてリサイズ*/
+  height: 4vw;
+  margin-right: 5px;
+  object-fit:contain; /*ボックスに合わせてリサイズ*/
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
-  .midashi {
-    position:absolute; 
-    top: 22vh;
-    left: 14vw;
-      box-sizing:border-box;
-   }
    
-   .midashi img {
-     width:4vw;
-     object-fit:cover /*ボックスに合わせてリサイズ*/
-   }
+.midashi img {
+  width:4vw;
+  object-fit:contain; /*ボックスに合わせてリサイズ*/
   }
+}
   
-  @media screen and (max-width: 767px) {
-  .midashi {
-    position:absolute; 
-    top: 20.5vh;
-    left: 15vw;
-      box-sizing:border-box;
-   }
+@media screen and (max-width: 767px) {
    
-   .midashi img {
-     width:6vw;
-     object-fit:cover /*ボックスに合わせてリサイズ*/
-   }
+.midashi img {
+  width:8vw;
+  height: 6vw;
+  object-fit:contain; /*ボックスに合わせてリサイズ*/
   }
+}
+
+h1 {
+  font-size: 20px;
+  font-family: "A1-light"; 
+  /* position:absolute;
+  top: 23vh;
+  left: 18vw; */
+  text-decoration: none;
+  color: #323232;
+  letter-spacing: 0.05em;
+  animation-name: fadein;
+  animation-duration: 3s;
+  font-style:italic;
+}
+
+.about {
+  font-size: 16px;
+  font-family: "A1-light"; 
+  /* position:absolute;
+  top: 40vh;
+  left: 16vw;
+  right:24vw; */
+
+  margin-left:10px;
+  margin-right:70px;
+  text-decoration: none;
+  color: #323232;
+  letter-spacing: 0.05em;
+  line-height:25px; /*行の高さを指定*/
+  animation-name: fadein;
+  animation-duration: 3s;
+  margin-bottom: 55px;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
 
 
-  h1 {
-    font-size: 20px;
-    font-family: "A1-light"; 
-    font-weight: 600;
-    position:absolute;
-    top: 22vh;
-    left: 18vw;
-    text-decoration: none;
-    color: #323232;
-    letter-spacing: 0.05em;
-    animation-name: fadein;
-    animation-duration: 3s;
-  }
-
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
   .about {
-    font-size: 16px;
-    font-family: "A1-light"; 
-    position:absolute;
-    top: 39vh;
-    left: 17vw;
-    text-decoration: none;
-    color: #323232;
-    letter-spacing: 0.05em;
+    font-size: 12px;
+    margin-right:0;
+    letter-spacing: 0.07em;
     line-height:18px; /*行の高さを指定*/
-    animation-name: fadein;
-    animation-duration: 3s;
+    margin-bottom: 90px;
   }
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1024px){ 
-    h1 {
-      font-size: 22px;
-      font-family: "A1-light"; 
-      font-weight: 600;
-      position:absolute;
-      top: 22vh;
-      left: 19vw;
-      text-decoration: none;
-      color: #323232;
-      letter-spacing: 0.05em;
-      font-style:italic;
-    }
-  
-    .about {
-      font-size: 16px;
-      font-family: "A1-light";
-      position:absolute;
-      top: 30vh;
-      left: 16vw;
-      right: 14vw;
-      text-decoration: none;
-      color: #323232;
-      letter-spacing: 0.07em;
-      line-height:24px; /*行の高さを指定*/
-    }
-  }
 
   @media screen and (max-width: 767px) {
     h1 {
-      font-size: 16px;
-      font-family: "A1-light"; 
-      font-weight: 600;
-      position:absolute;
-      top: 20vh;
-      left: 22vw;
-      text-decoration: none;
-      color: #323232;
-      letter-spacing: 0.05em;
-      font-style:italic;
+
     }
   
     .about {
       font-size: 12px;
-      font-family: "A1-light";
-      position:absolute;
-      top: 35vh;
-      left: 16vw;
-      right: 14vw;
-      text-decoration: none;
-      color: #323232;
+      margin-right:0;
       letter-spacing: 0.07em;
       line-height:18px; /*行の高さを指定*/
+      margin-bottom: 35px;
     }
   }
 
-
-  .shibori{
-    display:flex;
-    flex-wrap:wrap; /*折り返して配置*/
-    margin:0 15vw;
-    padding-top:13vh;
-    justify-content:space-between;
-    
+  .youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+    margin-top:50px;
+  
+    animation-name: fadein;
+    animation-duration: 3s;
   }
+  
+  .youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100% ;
+  }
+  
   
   @media screen and (min-width: 768px) and (max-width: 1024px){ 
-    .shibori{
-      padding-top:5vh;
+    .youtube {
+      position: relative;
+      width: 100%;
+      animation-name: fadein;
+      animation-duration: 3s;
     }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .shibori{
-      display:flex;
-      flex-wrap:wrap; /*折り返して配置*/
-      padding-top:30px;
-      margin:1vh 12vw;
-      justify-content:space-between;
-    }
-    }
-
-
-
-  .print{
-    display:flex;
-    flex-wrap:wrap; /*折り返して配置*/
-    margin:0 15vw;
-    padding-top:14vh;
-    padding-bottom:180px;
-    justify-content:space-between;
     
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 1024px){ 
-    .print{
-      padding-top:5vh;
+    .youtube iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100% ;
+      height: 100% ;
     }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .print{
-      display:flex;
-      flex-wrap:wrap; /*折り返して配置*/
-      padding-top:30px;
-      padding-bottom:10px;
-      margin:1vh 12vw;
-      justify-content:space-between;
-    }
-  }
+  } 
 
+  
 .work{
   width: 22vw;
   height:100%;
-  margin-bottom:2vh;
-  margin-left:0;
+  margin-bottom:10px;
+  margin-left:1vw;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -427,91 +389,99 @@
   object-fit:cover /*ボックスに合わせてリサイズ*/
 }
 
-.work p {
-  font-size: 16px;
-  padding: 18px;
-  color: white;
-  position: absolute;
-  font-family: "A1-light";
-  line-height: 17px;
-  letter-spacing: 2px;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
-
- .youtube {
-  position: relative;
-  width: 100%;
-  padding-top: 56%;
-  margin-top:10px;
-  margin-bottom:150px;
-  animation-name: fadein;
-  animation-duration: 3s;
-}
-
-.youtube iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100% ;
-  height: 100% ;
+.work:hover img{
+  opacity: 0.7;
 }
 
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
-  .youtube {
-    position: relative;
-    width: 100%;
-    padding-top: 56%;
-    margin-top:10px;
-    margin-bottom:110px;
-    animation-name: fadein;
-    animation-duration: 3s;
+  .work{
+    width: 17vw;
+    height:100%;
+    margin-bottom:7vh;
+    margin-left:1vw;
   }
-  
-  .youtube iframe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100% ;
-    height: 100% ;
-  }
-} 
+}
 
 
 @media screen and (max-width: 767px) {
-  .work{
-    width: 37vw;
+.work{
+    width: 35vw;
     height:100%;
-    margin-bottom:4px;
+    margin-bottom:0;
+    margin-left:1vw;
   }
-  .work p {
-    font-size: 11px;
-    padding:5px;
-    margin-left: 3px;
-    letter-spacing: 0.5px;
-  }
-
-  .youtube {
-    position: relative;
-    width: 100%;
-    padding-top: 56%;
-    margin-top:10px;
-    margin-bottom:70px;
-    animation-name: fadein;
-    animation-duration: 3s;
-  }
-  
-  .youtube iframe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100% ;
-    height: 100% ;
-  }
-
-  
 }
+
+
+
+h2 {
+  font-size: 20px;
+  font-family: "A1-light"; 
+  /* position:absolute;
+  top: 210vh;
+  left: 18vw; */
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #323232;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+/* .about2 {
+  font-size: 16px;
+  font-family: "A1-light";
+  position:absolute;
+  top: 225vh;
+  left: 17vw;
+  right: 24vw;
+  text-decoration: none;
+  color: #323232;
+  letter-spacing: 0.07em;
+  line-height:25px; /*行の高さを指定
+  animation-name: fadein;
+  animation-duration: 3s;
+  } */
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+  h2 {
+    font-size: 16px;
+    font-family: "A1-light"; 
+    /* position:absolute;
+    top: 127vh;
+    left: 22vw; */
+    text-decoration: none;
+    color: #323232;
+    letter-spacing: 0.05em;
+    font-style:italic;
+  }
+
+/*  .about2 {
+    font-size: 12px;
+    font-family: "A1-light";
+    position:absolute;
+    top: 133vh;
+    left: 16vw;
+    right: 14vw;
+    text-decoration: none;
+    color: #323232;
+    letter-spacing: 0.07em;
+    line-height:18px; /*行の高さを指定
+    } */
+  }
+    
+@media screen and (max-width: 767px) {
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-style:italic;
+}
+}
+
+
 
 /* ここからフッター */
 footer {
@@ -543,7 +513,6 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
   position: relative;
   left:95vw;
 }
-
  
  .officialsite{
   position: absolute;
@@ -577,6 +546,8 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
   letter-spacing: 1px;
   font-size: 14px;
 }
+
+
 
 @media screen and (max-width: 767px) {
   footer {
@@ -633,17 +604,17 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     letter-spacing: 1px;
     font-size: 10px;
   }
-  
+
 }
 
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  }
+from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
