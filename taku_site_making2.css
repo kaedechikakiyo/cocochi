@@ -31,6 +31,7 @@
 
   
 
+
   header {
     width: 100%;
     height: 10vh;
@@ -62,36 +63,19 @@
   }
   
   .header-logo-wrap.mini {
-    width: 8vw !important;
-    margin-top:5vh;
-    padding-left:0;
+    width: 10vw !important;
+    margin-top:2vh;
+    padding-left:2vw;
   
   }
 
+.header-logo-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
 .header-nav-list {
   list-style: none;
-}
-
-.header-nav-list li {
-  display: inline-block;
-  margin: 0 1.2vw;
-}
-
-.header-nav-list a {
-  text-decoration: none;
-  color: #231300;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  font-family: "A1-light",'interstate-mono, monospace';
-}
-
-.header-nav-list a:hover {
-  text-decoration: none;
-  color: #A8C692;
-  font-size: 15px;
-  letter-spacing: 0.05em;  
-  font-family: "A1-light",'interstate-mono, monospace';
 }
 
 /*iPad用 画面の幅が480px以下の時は下のコードが反映される*/
@@ -103,6 +87,29 @@
   }
 }
 
+.header-nav-list li {
+  display: inline-block;
+  margin: 0 1.5vw;
+}
+
+.header-nav-list a {
+  text-decoration: none;
+  color: #231300;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: "A1-light";
+  font-style: italic;
+}
+
+.header-nav-list a:hover {
+  text-decoration: none;
+  color: #A8C692;
+  font-size: 16px;
+  /*letter-spacing: 0.05em; /*文字間*/
+  font-family: "A1-light";
+  font-style: italic;
+}
 
 .fixed{
   position: fixed;
@@ -250,6 +257,220 @@
   }
 }
 
+/* 画面上部の帯 */
+
+#stage {
+	position: relative;
+	max-width: 660px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/*全ラジオボタンを非表示に*/
+#r1,#r2,#r3,#r4,#r5,#back1,#back2,#back3,#back4,#back5,#next1,#next2,#next3,#next4,#next5 {
+	display: none;
+}
+/* 表示切換えボタンと表示位置 */
+.circ img {
+	position: absolute;
+	bottom:2.5%;
+	cursor: pointer;
+}
+#lb1 img { left: 40%;width:3%; }
+#lb2 img { left: 43%;width:3%; }
+#lb3 img { left: 46%;width:3%; }
+#lb4 img { left: 49%;width:3%; }
+#lb5 img { left: 52%;width:3%; }
+/* 左右送りボタン */
+.pb, .nb { color:lightgray;font-weight:bold; font-size:26px;display:block;position:absolute;top:45%;/*z-index:200;pointer-events:auto;*/}
+.pb { left:0%; }
+.nb { left:96%; }
+.pb:hover, .nb:hover { color:#A8C692; cursor:pointer; }
+/* stageが初期サイズ以下のなったときのサイズ */
+@media screen and (max-width: 660px) { .pb, .nb { font-size:18px; } }
+/*全表示スライドのコンテナー*/
+#photos {
+	position: absolute;
+	width:100%;
+	height:90%; /*100%;*/
+	left: 4.55%;
+	opacity:0;
+	/*pointer-events: none;*/
+	animation:flowSlides 40s infinite;
+}
+/* 個々のスライド・現スライド標示ボタン */
+.pic {
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+.pic img:nth-child(1) { width:90.9%; margin-left:4.55%; }
+.pic img:nth-child(2) { width:3%; bottom:-8.5%; /*2.5%;*/ }
+
+/*表示スライドをphotosの中に横並びで一列に並べる*/
+#photo1 { left: 0; }
+#photo2 { left: 660px; }
+#photo3 { left: 1320px; }
+#photo4 { left: 1980px; }
+#photo5 { left: 2640px; }
+/* 写真の下に現スライド標示ボタンを配置 */
+#photo1 img:nth-child(2) { position:absolute;left:40%;width:3%; }
+#photo2 img:nth-child(2) { position:absolute;left:43%;width:3%; }
+#photo3 img:nth-child(2) { position:absolute;left:46%;width:3%; }
+#photo4 img:nth-child(2) { position:absolute;left:49%;width:3%; }
+#photo5 img:nth-child(2) { position:absolute;left:52%;width:3%; }
+/*チェックされたドットに相当するスライドが画面中央になるようにphotosを移動*/
+#r1:checked ~ #photos { animation:flowSlides1 40s infinite; animation-delay: 0s; }
+#r2:checked ~ #photos { animation:flowSlides2 40s infinite; animation-delay:-8s; }
+#r3:checked ~ #photos { animation:flowSlides3 40s infinite; animation-delay:-16s; }
+#r4:checked ~ #photos { animation:flowSlides4 40s infinite; animation-delay:-24s; }
+#r5:checked ~ #photos { animation:flowSlides5 40s infinite; animation-delay:-32s; }
+/* 左右送りボタン */
+#back1:checked ~ #photos { animation:flowSlides5 40s infinite; animation-delay:-32s; }
+#back2:checked ~ #photos { animation:flowSlides1 40s infinite; animation-delay: 0s; }
+#back3:checked ~ #photos { animation:flowSlides2 40s infinite; animation-delay:-8s; }
+#back4:checked ~ #photos { animation:flowSlides3 40s infinite; animation-delay:-16s; }
+#back5:checked ~ #photos { animation:flowSlides4 40s infinite; animation-delay:-24s; }
+#next1:checked ~ #photos { animation:flowSlides2 40s infinite; animation-delay:-8s; }
+#next2:checked ~ #photos { animation:flowSlides3 40s infinite; animation-delay:-16s; }
+#next3:checked ~ #photos { animation:flowSlides4 40s infinite; animation-delay:-24s; }
+#next4:checked ~ #photos { animation:flowSlides5 40s infinite; animation-delay:-32s; }
+#next5:checked ~ #photos { animation:flowSlides1 40s infinite; animation-delay: 0s; }
+/* 初期スライドショー */
+@keyframes flowSlides {
+	0% { left:0px; opacity:0; }
+	2% { left:0px; opacity:1; }
+	18% { left:0px; opacity:1; }
+	20% { left:0px; opacity:0; }
+	20.01% { left:-660px; opacity:0; }
+	22% { left:-660px; opacity:1; }
+	38% { left:-660px; opacity:1; }
+	40% { left:-660px; opacity:0; }
+	40.01% { left:-1320px; opacity:0; }
+	42% { left:-1320px; opacity:1; }
+	58% { left:-1320px; opacity:1; }
+	60% { left:-1320px; opacity:0; }
+	60.01% { left:-1980px; opacity:0; }
+	62% { left:-1980px; opacity:1; }
+	78% { left:-1980px; opacity:1; }
+	80% { left:-1980px; opacity:0; }
+	80.01% { left:-2640px; opacity:0; }
+	82% { left:-2640px; opacity:1; }
+	98% { left:-2640px; opacity:1; }
+	100% { left:-2640px; opacity:0; }
+}
+/* 各スライド向けスライドショー */
+@keyframes flowSlides1 {
+	0% { left:0px; opacity:0; }
+	2% { left:0px; opacity:1; }
+	18% { left:0px; opacity:1; }
+	20% { left:0px; opacity:0; }
+	20.01% { left:-660px; opacity:0; }
+	22% { left:-660px; opacity:1; }
+	38% { left:-660px; opacity:1; }
+	40% { left:-660px; opacity:0; }
+	40.01% { left:-1320px; opacity:0; }
+	42% { left:-1320px; opacity:1; }
+	58% { left:-1320px; opacity:1; }
+	60% { left:-1320px; opacity:0; }
+	60.01% { left:-1980px; opacity:0; }
+	62% { left:-1980px; opacity:1; }
+	78% { left:-1980px; opacity:1; }
+	80% { left:-1980px; opacity:0; }
+	80.01% { left:-2640px; opacity:0; }
+	82% { left:-2640px; opacity:1; }
+	98% { left:-2640px; opacity:1; }
+	100% { left:-2640px; opacity:0; }
+}
+@keyframes flowSlides2 {
+	0% { left:0px; opacity:0; }
+	2% { left:0px; opacity:1; }
+	18% { left:0px; opacity:1; }
+	20% { left:0px; opacity:0; }
+	20.01% { left:-660px; opacity:0; }
+	22% { left:-660px; opacity:1; }
+	38% { left:-660px; opacity:1; }
+	40% { left:-660px; opacity:0; }
+	40.01% { left:-1320px; opacity:0; }
+	42% { left:-1320px; opacity:1; }
+	58% { left:-1320px; opacity:1; }
+	60% { left:-1320px; opacity:0; }
+	60.01% { left:-1980px; opacity:0; }
+	62% { left:-1980px; opacity:1; }
+	78% { left:-1980px; opacity:1; }
+	80% { left:-1980px; opacity:0; }
+	80.01% { left:-2640px; opacity:0; }
+	82% { left:-2640px; opacity:1; }
+	98% { left:-2640px; opacity:1; }
+	100% { left:-2640px; opacity:0; }
+}
+@keyframes flowSlides3 {
+	0% { left:0px; opacity:0; }
+	2% { left:0px; opacity:1; }
+	18% { left:0px; opacity:1; }
+	20% { left:0px; opacity:0; }
+	20.01% { left:-660px; opacity:0; }
+	22% { left:-660px; opacity:1; }
+	38% { left:-660px; opacity:1; }
+	40% { left:-660px; opacity:0; }
+	40.01% { left:-1320px; opacity:0; }
+	42% { left:-1320px; opacity:1; }
+	58% { left:-1320px; opacity:1; }
+	60% { left:-1320px; opacity:0; }
+	60.01% { left:-1980px; opacity:0; }
+	62% { left:-1980px; opacity:1; }
+	78% { left:-1980px; opacity:1; }
+	80% { left:-1980px; opacity:0; }
+	80.01% { left:-2640px; opacity:0; }
+	82% { left:-2640px; opacity:1; }
+	98% { left:-2640px; opacity:1; }
+	100% { left:-2640px; opacity:0; }
+}
+@keyframes flowSlides4 {
+	0% { left:0px; opacity:0; }
+	2% { left:0px; opacity:1; }
+	18% { left:0px; opacity:1; }
+	20% { left:0px; opacity:0; }
+	20.01% { left:-660px; opacity:0; }
+	22% { left:-660px; opacity:1; }
+	38% { left:-660px; opacity:1; }
+	40% { left:-660px; opacity:0; }
+	40.01% { left:-1320px; opacity:0; }
+	42% { left:-1320px; opacity:1; }
+	58% { left:-1320px; opacity:1; }
+	60% { left:-1320px; opacity:0; }
+	60.01% { left:-1980px; opacity:0; }
+	62% { left:-1980px; opacity:1; }
+	78% { left:-1980px; opacity:1; }
+	80% { left:-1980px; opacity:0; }
+	80.01% { left:-2640px; opacity:0; }
+	82% { left:-2640px; opacity:1; }
+	98% { left:-2640px; opacity:1; }
+	100% { left:-2640px; opacity:0; }
+}
+@keyframes flowSlides5 {
+	0% { left:0px; opacity:0; }
+	2% { left:0px; opacity:1; }
+	18% { left:0px; opacity:1; }
+	20% { left:0px; opacity:0; }
+	20.01% { left:-660px; opacity:0; }
+	22% { left:-660px; opacity:1; }
+	38% { left:-660px; opacity:1; }
+	40% { left:-660px; opacity:0; }
+	40.01% { left:-1320px; opacity:0; }
+	42% { left:-1320px; opacity:1; }
+	58% { left:-1320px; opacity:1; }
+	60% { left:-1320px; opacity:0; }
+	60.01% { left:-1980px; opacity:0; }
+	62% { left:-1980px; opacity:1; }
+	78% { left:-1980px; opacity:1; }
+	80% { left:-1980px; opacity:0; }
+	80.01% { left:-2640px; opacity:0; }
+	82% { left:-2640px; opacity:1; }
+	98% { left:-2640px; opacity:1; }
+	100% { left:-2640px; opacity:0; }
+}
+
+
 
 .midashi {
  /* position:absolute; 
@@ -289,6 +510,147 @@ margin-bottom: 60px;
   }
 }
 
+@media screen and (max-width: 1024px){ 
+
+.what-list{
+  padding-bottom:50px;
+  width: 70%;
+  max-width: 1140px;
+  margin: auto;
+  list-style: none;
+}
+
+.what-list li{
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.what-list-img-wrap{
+  width:50%;
+}
+
+.what-list-img-wrap img{
+  width:100%;
+}
+
+.what-list-caption{
+  width: 90%;
+  padding-right:0;
+   padding-left:30px;
+}
+
+.what-list-caption h3{
+ font-size: 22px;
+ margin-bottom: 20px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ letter-spacing: 1px;
+ font-style: italic;
+}
+
+.what-list-caption p{
+ font-size: 14px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ margin-left:0;
+ margin-bottom: 30px;
+ line-height: 1.5;
+}
+
+.what-list-caption a{
+ font-size: 13px;
+ font-weight: 600;
+ text-decoration: none;
+ font-family: "A1-light",'interstate-mono, monospace';
+ color:#231300;
+
+ border-bottom: solid 1.2px #231300;
+ /* border: solid 1px #231300; 一重の線 */
+ display: flex;
+ align-items: center;
+ justify-content: center; /*この３列で上下中央ぞろえ*/
+ float: right;
+}
+
+.what-list-caption a:hover{
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: solid 1.2px #A8C692;
+  font-family: "A1-light",'interstate-mono, monospace';
+  color:#A8C692;
+  /* border: solid 1px #A8C692; 一重の線 */
+  display: flex;
+  align-items: center;
+  justify-content: center; /*この３列で上下中央ぞろえ*/
+  float: right;
+ }
+
+.what-list-caption img{
+ width:30px;
+}
+
+.what-list-reverse{
+ flex-direction: row-reverse; /*配置が左右逆*/
+}
+
+.what-list2{
+  flex-direction: row; /*配置が左右逆*/
+ }
+
+ .what{
+    padding-top:80px;
+  }
+  
+  .what-list{
+    padding-bottom:40px;
+  }
+  
+  .what-list li{
+    flex-direction: column; /*積み重なるように配置する*/
+    margin-bottom:40px;
+  }
+  
+  .what-list-img-wrap{
+    width: 90vw;
+    margin-bottom: 30px;
+  }
+  
+  
+  .what-list-caption{
+    width: 100%;
+    margin-left:10px;
+    padding-right: 10px;
+    padding-left: 0;
+  }
+  
+  .what-list-caption h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .what-list-caption img{
+    width: 20px;
+  }
+  
+  .what-list-caption p{
+    font-size: 12px;
+    margin-left: 35px;
+  }
+  
+  .what-list-caption a{
+      font-size: 12px;
+      font-weight: 600;
+     }
+  
+     .what-list-caption a:hover {
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: "A1-light",'interstate-mono, monospace';
+        /* color:#A8C692;
+        border: solid 1px #A8C692; 一重の線 */
+     }
+    }
 
 h1 {
   font-size: 20px;
@@ -326,13 +688,10 @@ h1 {
   animation-duration: 3s;
 }
 
-
 .about p{
   animation-name: fadein;
   animation-duration: 3s;
 }
-
-
 
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 

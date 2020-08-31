@@ -114,6 +114,20 @@ $(function() {
   })
   })(jQuery);
 
+  (function($){
+
+    $(function(){
+       $(window).scroll(function(){
+          var scr = $(window).scrollTop();
+          if(scr > 1){
+             $('header').addClass('mini');
+          }else{
+             $('header').removeClass('mini');
+          }
+       })
+    })
+    })(jQuery);
+
   var mvh = $('.main-visual').height();
 
   $(window).scroll(function() {
@@ -135,5 +149,16 @@ $(function() {
       $('header').css('background-color', 'transparent');
     }
   });
+
+  $(function() {
+    setTimeout(function(){
+      $('.start p').fadeIn(1600);
+    },500); //0.5秒後にロゴをフェードイン!
+    setTimeout(function(){
+      $('.start').fadeOut(500);
+    },2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+  });
+  
+  
 
   

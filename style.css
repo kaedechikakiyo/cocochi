@@ -29,38 +29,42 @@
     }
 
 
-
-header {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
-  align-items: center;
-  padding: 0 3vw;
-  position: relative;
-  z-index: 2; /*重ね順*/
-  background-color: transparent;
-}
-
-body {
-  color: #231300;
-}
-
-.header-logo-wrap {
-  width: 12vw;
-  margin-top:7vh;
-}
-
-.header-logo-wrap img {
-  width: 100%;
-  height: 100%;
-}
-
-.header-logo-wrap.mini {
-  width: 7vw !important;
-  margin-top:3vh;
-
-}
+    header {
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
+      align-items: center;
+      padding-right:3vw;
+      padding-left:2vw;
+      position: relative;
+      z-index: 2; /*重ね順*/
+      background-color: transparent;
+    }
+    
+    body {
+      color: #231300;
+    }
+    
+    .header-logo-wrap {
+      width: 12vw;
+      margin-top:7vh;
+    }
+    
+    .header-logo-wrap img {
+      width: 100%;
+      height: 100%;
+    }
+    header.mini{
+      height:7vh;
+    }
+    
+    .header-logo-wrap.mini {
+      width: 8vw !important;
+      margin-top:5vh;
+      padding-left:0;
+    
+    }
 
 .header-nav-list {
   list-style: none;
@@ -68,26 +72,24 @@ body {
 
 .header-nav-list li {
   display: inline-block;
-  margin: 0 1.5vw;
+  margin: 0 1.2vw;
 }
 
 .header-nav-list a {
   text-decoration: none;
   color: #231300;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05em;
   font-family: "A1-light",'interstate-mono, monospace';
-  font-style: italic;
 }
 
 .header-nav-list a:hover {
   text-decoration: none;
   color: #A8C692;
-  font-size: 16px;
-  /*letter-spacing: 0.05em; /*文字間*/
+  font-size: 15px;
+  letter-spacing: 0.05em;  
   font-family: "A1-light",'interstate-mono, monospace';
-  font-style: italic;
 }
 
 .header-sp-icon-wrap{
@@ -243,21 +245,20 @@ body {
 .what-list-caption p{
  font-size: 14px;
  font-family: "A1-light",'interstate-mono, monospace';
- margin-left:49px;
- margin-bottom: 30px;
+ margin-left:45px;
+ margin-bottom: 20px;
  line-height: 1.5;
 }
 
 .what-list-caption a{
- width: 160px;
- height: 40px;
  font-size: 13px;
  font-weight: 600;
  text-decoration: none;
  font-family: "A1-light",'interstate-mono, monospace';
  color:#231300;
- border: solid 1px #231300; /*一重の線*/
- border-radius: 50px;
+
+ border-bottom: solid 1.2px #231300;
+ /* border: solid 1px #231300; 一重の線 */
  display: flex;
  align-items: center;
  justify-content: center; /*この３列で上下中央ぞろえ*/
@@ -265,14 +266,12 @@ body {
 }
 
 .what-list-caption a:hover{
-  width: 160px;
-  height: 40px;
   font-size: 13px;
   font-weight: 600;
-  text-decoration: none;
+  border-bottom: solid 1.2px #A8C692;
   font-family: "A1-light",'interstate-mono, monospace';
   color:#A8C692;
-  border: solid 1px #A8C692; /*一重の線*/
+  /* border: solid 1px #A8C692; 一重の線 */
   display: flex;
   align-items: center;
   justify-content: center; /*この３列で上下中央ぞろえ*/
@@ -749,38 +748,22 @@ header{
 
 .what-list-caption p{
   font-size: 12px;
-  margin-left: 31px;
+  margin-left: 35px;
 }
 
 .what-list-caption a{
-  width: 140px;
-  height: 40px;
     font-size: 12px;
     font-weight: 600;
-    text-decoration: none;
-    font-family: "A1-light",'interstate-mono, monospace';
-    color:#231300;
-    border: 0px; /*一重の線*/
-    display: flex;
-    align-items: center;
-    justify-content: center; /*この３列で上下中央ぞろえ*/
-    float: right;
    }
 
    .what-list-caption a:hover {
-    width: 140px;
-    height: 40px;
       font-size: 12px;
       font-weight: 600;
       text-decoration: none;
       font-family: "A1-light",'interstate-mono, monospace';
-      color:#A8C692;
-      border: solid 1px #A8C692; /*一重の線*/
-      display: flex;
-      align-items: center;
-      justify-content: center; /*この３列で上下中央ぞろえ*/
-      float: right;
-}
+      /* color:#A8C692;
+      border: solid 1px #A8C692; 一重の線 */
+   }
 
 iframe{
   padding-top:70px;

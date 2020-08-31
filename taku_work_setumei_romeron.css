@@ -30,36 +30,44 @@
   }
 
 
-header {
-width: 100%;
-height: 10vh;
-display: flex;
-justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
-align-items: center;
-padding: 0 3vw;
-position: relative; /*固定*/
-z-index: 2; /*重ね順*/
-}
+
+
+  header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
+    align-items: center;
+    padding-right:3vw;
+    padding-left:2vw;
+    position: relative;
+    z-index: 2; /*重ね順*/
+    background-color: transparent;
+  }
   
-body {
+  body {
     color: #231300;
-}
-
-.header-logo-wrap {
-  width: 12vw;
-  margin-top:7vh;
-}
-
-.header-logo-wrap.mini {
-  width: 7vw !important;
-  margin-top:3vh;
-
-}
-
-.header-logo-wrap img {
-  width: 100%;
-  height: 100%;
-}
+  }
+  
+  .header-logo-wrap {
+    width: 12vw;
+    margin-top:7vh;
+  }
+  
+  .header-logo-wrap img {
+    width: 100%;
+    height: 100%;
+  }
+  header.mini{
+    height:7vh;
+  }
+  
+  .header-logo-wrap.mini {
+    width: 8vw !important;
+    margin-top:5vh;
+    padding-left:0;
+  
+  }
 
 .header-nav-list {
   list-style: none;
@@ -67,26 +75,24 @@ body {
 
 .header-nav-list li {
   display: inline-block;
-  margin: 0 1.5vw;
+  margin: 0 1.2vw;
 }
 
 .header-nav-list a {
   text-decoration: none;
   color: #231300;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  font-family: "A1-light";
-  font-style: italic;
+  font-family: "A1-light",'interstate-mono, monospace';
 }
 
 .header-nav-list a:hover {
   text-decoration: none;
   color: #A8C692;
-  font-size: 16px;
-  /*letter-spacing: 0.05em; /*文字間*/
-  font-family: "A1-light";
-  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.05em;  
+  font-family: "A1-light",'interstate-mono, monospace';
 }
 
 .fixed{
