@@ -230,7 +230,7 @@
 
 .what-list-caption{
   width: 35%;
-  padding-right:30px;
+  padding-right:60px;
    padding-left:30px;
 }
 
@@ -243,11 +243,11 @@
 }
 
 .what-list-caption p{
- font-size: 14px;
- font-family: "A1-light",'interstate-mono, monospace';
- margin-left:45px;
- margin-bottom: 20px;
- line-height: 1.5;
+  font-size: 14px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  margin-left: 80px;
+  margin-bottom: 20px;
+  line-height: 24px;
 }
 
 .what-list-caption a{
@@ -721,7 +721,7 @@ header{
 
 .what-list li{
   flex-direction: column; /*積み重なるように配置する*/
-  margin-bottom:40px;
+  margin-bottom:60px;
 }
 
 .what-list-img-wrap{
@@ -732,9 +732,9 @@ header{
 
 .what-list-caption{
   width: 70%;
-  margin-left:10px;
-  padding-right: 10px;
-  padding-left: 0;
+    margin-left: 70px;
+    padding-right: 40px;
+    padding-left: 0;
 }
 
 .what-list-caption h3{
@@ -748,7 +748,8 @@ header{
 
 .what-list-caption p{
   font-size: 12px;
-  margin-left: 35px;
+  margin-left: 49px;
+  line-height: 19px;
 }
 
 .what-list-caption a{
@@ -917,7 +918,7 @@ textarea {
   width: 100%;
   height: 1px;
   background-color: #231300;
-  border-radius: 1px; /*線が丸くなる*/
+  
   transform-origin: left; /*起点の設定・線の左端が起点になる*/
   transition: all 0.3s ease-out; /*all変化するすべてのプロパティに適用*/
 }

@@ -158,7 +158,22 @@ $(function() {
       $('.start').fadeOut(500);
     },2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
   });
-  
-  
 
-  
+  $(function(){
+    ScrollReveal().reveal('.what-list li');
+  });
+
+  $(function(){
+    var 任意の変数名= {
+              delay: 800,
+
+              duration: 1000,
+      
+              distance: '100px', //要素の移動距離
+      
+              origin: 'bottom' //要素が移動してくる方向
+          };
+      
+          ScrollReveal().reveal('.what-list li');
+      
+  });
