@@ -31,7 +31,7 @@
 
     header {
       width: 100%;
-      height: 10vh;
+      height: 7vh;
       display: flex;
       justify-content: space-between; /*ヘッダーの中のコンテンツが右と左に分かれる*/
       align-items: center;
@@ -48,13 +48,14 @@
     
     .header-logo-wrap {
       width: 12vw;
-      margin-top:7vh;
+      margin-top:9vh;
     }
     
     .header-logo-wrap img {
       width: 100%;
       height: 100%;
     }
+    
     header.mini{
       height:7vh;
     }
@@ -114,7 +115,7 @@
 
 .main-visual { /*親要素*/
   width: 100vw;
- 
+  margin-top: -25vh;
   position: relative;
   margin-bottom: 160px;
 }
@@ -156,6 +157,7 @@
   
  .catch-copy{
   padding:0 30vw ;
+  margin-top: 200px;
    margin-bottom: 160px;
    animation-name: fadein;
    animation-duration: 3s;
@@ -466,11 +468,19 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     height: 100%;
   }
   
+  .header-logo-wrap.mini {
+    width: 10vw !important;
+    margin-top:1vh;
+    padding-left:0;
+  
+  }
+  
   .main-visual { /*親要素*/
     width: 100%;
     height: 60vh;
     position: relative;
     margin-bottom:-50px;
+    margin-top: 0;
   }
   
   
@@ -635,6 +645,7 @@ header{
 .main-visual{
   height:50vh;
   margin-bottom: 50vh;
+  margin-top: 0;
 }
 
 .main-visual-img-wrap{ /*画像を包んでいたボックス*/

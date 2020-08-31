@@ -112,6 +112,21 @@
 }
 
 
+/*iPad用 画面の幅が480px以下の時は下のコードが反映される*/
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+
+  .header-logo-wrap {
+    width: 15vw;
+    margin-top:3vh;
+  }
+
+  .header-logo-wrap.mini {
+    width: 10vw !important;
+    margin-top:1vh;
+    padding-left:0;
+  
+  }
+}
 
 @media screen and (max-width: 767px) {
   header {

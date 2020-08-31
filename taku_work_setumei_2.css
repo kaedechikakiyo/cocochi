@@ -114,6 +114,13 @@
     width: 15vw;
     margin-top:3vh;
   }
+
+  .header-logo-wrap.mini {
+    width: 10vw !important;
+    margin-top:1vh;
+    padding-left:0;
+  
+  }
 }
 
 @media screen and (max-width: 767px) {
