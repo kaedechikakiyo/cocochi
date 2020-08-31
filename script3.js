@@ -142,7 +142,7 @@ $(function() {
 
 
 
-  var mvh = $('.midashi').height();
+  var mvh = $('.work1 img').height();
 
   $(window).scroll(function() {
     var top = $(window).scrollTop();

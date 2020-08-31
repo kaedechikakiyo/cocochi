@@ -113,8 +113,7 @@
 
 
 .main-visual { /*親要素*/
-  width: 100%;
-  height: 100vh; /*calc(100vh-80px)で画面いっぱいからヘッダー分の高さを引く*/
+  width: 100vw;
  
   position: relative;
   margin-bottom: 160px;
@@ -124,7 +123,6 @@
 .main-visual-img-wrap {
   width: 100%;
   height: 100%;
-  margin-top:-25vh;
   float: right;
 }
 
