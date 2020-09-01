@@ -680,7 +680,7 @@ header{
   position: absolute; /*親要素=main-visualのなかで絶対配置(親要素はposition:relative;としておく・topやleftなどを使える*/
   left:0;
   right:0;
-  bottom:5vh;
+  bottom:4vh;
   margin:auto; /*左右中央に配置できる*/
  }
  
