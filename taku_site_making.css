@@ -428,7 +428,7 @@ h1 {
 .work{
   width: 100vw;
   height:100%;
-  margin-bottom:20px;
+  margin-bottom:30px;
   margin-left:0;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
@@ -443,7 +443,7 @@ h1 {
 }
 
 .work img:hover{
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 
@@ -514,7 +514,7 @@ h1 {
 .free{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:0 0 300px;
+  margin:0 0 200px;
   /* padding-top:45vh; */
   justify-content:space-between;
 }
