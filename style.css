@@ -144,7 +144,7 @@
  position: absolute; /*親要素=main-visualのなかで絶対配置(親要素はposition:relative;としておく・topやleftなどを使える*/
  left:0;
  right:0;
- bottom:3vh;
+ bottom:1vh;
  margin:auto; /*左右中央に配置できる*/
  animation-name: fadein;
  animation-duration: 3s;
