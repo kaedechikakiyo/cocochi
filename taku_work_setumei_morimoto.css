@@ -469,8 +469,7 @@ flex-wrap:wrap; /*折り返して配置*/
 .work{
   width: 100vw;
   height:100%;
-  margin:0 auto;
-  margin-bottom:5vh;
+  margin:0 auto 20px;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -484,7 +483,7 @@ flex-wrap:wrap; /*折り返して配置*/
 }
 
 .caption1{
-  font-size: 18px;
+  font-size: 16px;
   font-family: "A1-light";
   font-weight: 600;
   padding-top: 30px;
@@ -497,7 +496,7 @@ flex-wrap:wrap; /*折り返して配置*/
 }
 
 .caption{
-  font-size: 16px;
+  font-size: 13px;
   font-family: "A1-light";
   line-height:26px;
   padding-left: 35px;
@@ -562,10 +561,10 @@ flex-wrap:wrap; /*折り返して配置*/
   }
 
   .caption1{
-    font-size: 15px;
+    font-size: 13px;
     font-family: "A1-light";
     font-weight: 600;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 10px;
     margin:0 34px;
     padding-left: 0;
@@ -576,14 +575,14 @@ flex-wrap:wrap; /*折り返して配置*/
 }
 
 .caption{
-    font-size: 12px;
+    font-size: 11px;
     font-family: "A1-light";
     line-height:18px;
     margin:0 34px;
     padding-left: 0;
     animation-name: fadein;
     animation-duration: 2s;
-    padding-bottom: 20px;
+    padding-bottom: 0;
  }
 
  .caption a{
