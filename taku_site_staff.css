@@ -232,7 +232,7 @@ main{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
   margin:0 15vw;
-  padding-top:40vh;
+  padding-top:45vh;
   padding-bottom:14vh;
   justify-content:space-between;
   
@@ -250,6 +250,7 @@ main{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
     margin:1vh 12vw;
+    padding-top:43vh;
     justify-content:space-between;
   }
 }
