@@ -154,6 +154,16 @@
  width:100%; /*親要素＝30pxと同じサイズになる*/
 }
 
+_::-webkit-full-page-media, _:future, :root .main-visual-scroll{ 
+  width:35px;
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:1vh;
+  margin:auto;
+  animation-name: fadein;
+  animation-duration: 3s;
+ }
   
  .catch-copy{
   padding:0 30vw ;
