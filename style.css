@@ -656,6 +656,13 @@ header{
   margin-top:-10vh;
 }
 
+_::-webkit-full-page-media, _:future, :root .main-visual-img-wrap{ /*画像を包んでいたボックス*/
+  width: 100%;
+  float:none; /*右に寄せていたものを解除*/
+  margin:0;
+  margin-top:-13vh;
+}
+
 
 .main-visual-img-wrap img {
   width: 100%;
@@ -685,13 +692,8 @@ header{
   margin:auto; /*左右中央に配置できる*/
  }
 
- _::-webkit-full-page-media, _:future, :root .main-visual-scroll{ /*クラスにあてるときは最初に.をつける*/
-  width:30px;
-  position: absolute; /*親要素=main-visualのなかで絶対配置(親要素はposition:relative;としておく・topやleftなどを使える*/
-  left:0;
-  right:0;
+ _::-webkit-full-page-media, _:future, :root .main-visual-scroll{ 
   bottom:0;
-  margin:auto; /*左右中央に配置できる*/
  }
 
 
