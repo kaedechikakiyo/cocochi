@@ -457,11 +457,6 @@ h1 {
   .slick-dots li button:before{
     line-height: 40px !important
   }
-  
-  .slick-dots li.slick-active button:before {
-    opacity: .75;
-    color: #A8C692 !important  
-}
 
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
@@ -563,7 +558,7 @@ h1 {
   .free{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:20px 15vw 150px;
+    margin:20px 15vw 200px;
     justify-content:space-between;
   }
   }
@@ -738,7 +733,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     font-size: 11px;
     font-family: "A1-light"; 
     position:absolute;
-    bottom:260px;
+    bottom:270px;
     left: 14vw;
   }
 
@@ -747,7 +742,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     font-size: 11px;
     font-family: "A1-light"; 
     position:absolute;
-    bottom:260px;
+    bottom:270px;
     right: 13vw;
   }
 
