@@ -611,7 +611,7 @@ h1 {
   opacity: .5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #88bb64 !important
+  color: gray !important
 }
 
 .slick-next {
