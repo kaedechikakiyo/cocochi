@@ -388,7 +388,75 @@ textarea {
 [type="submit"]:hover { opacity: 0.8;}
 
 
+/* .message-list{
+  
+  padding-bottom:50px;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  list-style: none;
+}
 
+.message-list li{
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+
+.message-list-caption{
+  width: 70%;
+  padding-right:60px;
+  margin-left:30px;
+}
+
+.message-list-caption h3{
+ font-size: 22px;
+ margin-bottom: 20px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ letter-spacing: 1px;
+ font-style: italic;
+ text-align: center;
+ margin: 0 auto px;
+}
+
+.message-list-caption-setumei{
+  font-size: 14px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 auto 20px;
+ }
+
+.message{
+  color: #231300;
+  background-color: rgb(247, 247, 247);
+  padding:10px 15px;
+  font-size: 14px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  margin-left:30px;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+
+.name{
+  position: relative;
+  font-size: 14px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  color:#A8C692;
+  letter-spacing: 1px;
+  margin-left:40px;
+  margin-bottom: 15px;
+}
+
+.message-list-caption img{
+ width:30px;
+}
+
+.message-list-reverse{
+ flex-direction: row-reverse; /*配置が左右逆
+} */
 
 /* ここからフッター */
 footer {
@@ -615,7 +683,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
   }
 
   iframe{
-    padding-top:30px;
+    padding-top:40px;
     width:70%;
   }
 }
@@ -867,6 +935,76 @@ textarea {
   border-radius: 5px;
 }
 
+/* 
+.message-list{
+  
+  padding-bottom:50px;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  list-style: none;
+}
+
+.message-list li{
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+
+.message-list-caption{
+  width: 90%;
+  padding-right:60px;
+  margin-left:30px;
+}
+
+.message-list-caption h3{
+ font-size: 17px;
+ margin-bottom: 20px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ letter-spacing: 1px;
+ font-style: italic;
+ text-align: center;
+ margin: 0 auto px;
+}
+
+.message-list-caption-setumei{
+  font-size: 12px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 0 20px 36px;
+ }
+
+.message{
+  color: #231300;
+  background-color: rgb(247, 247, 247);
+  padding:10px 15px;
+  font-size: 12px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  margin-left:30px;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+
+.name{
+  position: relative;
+  font-size: 12px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  color:#A8C692;
+  letter-spacing: 1px;
+  margin-left:40px;
+  margin-bottom: 15px;
+}
+
+.message-list-caption img{
+ width:30px;
+}
+
+.message-list-reverse{
+ flex-direction: row-reverse; /*配置が左右逆
+} */
 
 
      footer {
