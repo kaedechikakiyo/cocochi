@@ -556,11 +556,12 @@ h1 {
 }
 
 .what-list-img-wrap{
-  width:50%
+  width:50%;
 }
 
 .what-list-img-wrap img{
-  width:100%
+  width:100%;
+  height:100%;
 }
 
 .what-list-caption{
@@ -741,8 +742,8 @@ h2 {
 }
 
 .what-list-img-wrap{
-  width: 100vw;
-  margin-bottom: 30px;
+  width: 80vw;
+  margin-bottom: 20px;
 }
 
 .what-list-caption{
@@ -761,7 +762,7 @@ h2 {
 }
 
 .what-list-caption p{
-  font-size: 13px;
+  font-size: 12px;
   margin-left: 31px;
   margin-bottom:20px;
 }
