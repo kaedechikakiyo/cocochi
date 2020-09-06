@@ -172,3 +172,25 @@ $(function() {
           ScrollReveal().reveal('.what-list li');
       
   });
+
+
+  $(function(){
+    $('#slick01').slick({
+    autoplay: true, //自動再生
+    dots: true, //ドットインジケータの表示
+    });
+    });
+
+    $(function(){
+      $('#slick02').slick({
+      autoplay: true, //自動再生
+      dots: true, //ドットインジケータの表示
+      });
+      });
+
+      $(function(){
+        $('#slick03').slick({
+        autoplay: true, //自動再生
+        dots: true, //ドットインジケータの表示
+        });
+        });

@@ -536,6 +536,93 @@ h1 {
   }
 }
 
+.what{
+  padding: 100px 0 0; /*内側の余白*/
+}
+
+.what-list{
+  padding-bottom:50px;
+  width: 75vw;
+  margin: auto;
+  list-style: none;
+}
+
+.what-list li{
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.what-list-img-wrap{
+  width:50%
+}
+
+.what-list-img-wrap img{
+  width:100%
+}
+
+.what-list-caption{
+  width: 35%;
+  padding-right:60px;
+   padding-left:30px;
+}
+
+.what-list-caption h3{
+ font-size: 22px;
+ margin-bottom: 20px;
+ font-family: "A1-light",'interstate-mono, monospace';
+ letter-spacing: 1px;
+ font-style: italic;
+}
+
+.what-list-caption p{
+  font-size: 14px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  margin-left: 80px;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.what-list-caption a{
+ font-size: 13px;
+ font-weight: 600;
+ text-decoration: none;
+ font-family: "A1-light",'interstate-mono, monospace';
+ color:#231300;
+
+ border-bottom: solid 1.2px #231300;
+ /* border: solid 1px #231300; 一重の線 */
+ display: flex;
+ align-items: center;
+ justify-content: center; /*この３列で上下中央ぞろえ*/
+ float: right;
+}
+
+.what-list-caption a:hover{
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: solid 1.2px #A8C692;
+  font-family: "A1-light",'interstate-mono, monospace';
+  color:#A8C692;
+  /* border: solid 1px #A8C692; 一重の線 */
+  display: flex;
+  align-items: center;
+  justify-content: center; /*この３列で上下中央ぞろえ*/
+  float: right;
+ }
+
+.what-list-caption img{
+ width:30px;
+}
+
+.what-list-reverse{
+ flex-direction: row-reverse; /*配置が左右逆*/
+}
+
+.what-list2{
+  flex-direction: row; /*配置が左右逆*/
+ }
 
 h2 {
   margin-left:16px;
@@ -603,6 +690,65 @@ h2 {
   margin-bottom: 20px;
   font-style:italic;
 }
+
+.what{
+  padding: 100px 0 0; /*内側の余白*/
+}
+
+.what-list{
+  padding-bottom:70px;
+}
+
+.what-list li{
+  flex-direction: column; /*積み重なるように配置する*/
+  margin-bottom:60px;
+}
+
+.what-list-img-wrap{
+  width: 100vw;
+  margin-bottom: 30px;
+}
+
+.what-list-caption{
+  width: 100%;
+  padding: 0 20px;
+}
+
+.what-list-caption h3{
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.what-list-caption img{
+  width: 20px;
+}
+
+.what-list-caption p{
+  font-size: 13px;
+  margin-left: 31px;
+  margin-bottom:20px;
+}
+
+.what-list-caption a{
+  width: 140px;
+  height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "A1-light",'interstate-mono, monospace';
+    color:#231300;
+    border: solid 1px #231300; /*一重の線*/
+    display: flex;
+    align-items: center;
+    justify-content: center; /*この３列で上下中央ぞろえ*/
+    float: right;
+   }
+
+
+.what-list-caption a:hover{
+  width: 140px;
+  height: 40px;
+   }
 }
 
 
