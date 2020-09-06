@@ -581,12 +581,12 @@ h1 {
 .what-list-caption p{
   font-size: 14px;
   font-family: "A1-light",'interstate-mono, monospace';
-  margin-left: 80px;
+  margin-left: 48px;
   margin-bottom: 20px;
   line-height: 24px;
 }
 
-.what-list-caption a{
+/* .what-list-caption a{
  font-size: 13px;
  font-weight: 600;
  text-decoration: none;
@@ -594,10 +594,10 @@ h1 {
  color:#231300;
 
  border-bottom: solid 1.2px #231300;
- /* border: solid 1px #231300; 一重の線 */
+ /* border: solid 1px #231300; 一重の線 
  display: flex;
  align-items: center;
- justify-content: center; /*この３列で上下中央ぞろえ*/
+ justify-content: center; /*この３列で上下中央ぞろえ
  float: right;
 }
 
@@ -607,12 +607,23 @@ h1 {
   border-bottom: solid 1.2px #A8C692;
   font-family: "A1-light",'interstate-mono, monospace';
   color:#A8C692;
-  /* border: solid 1px #A8C692; 一重の線 */
+  /* border: solid 1px #A8C692; 一重の線 
   display: flex;
   align-items: center;
-  justify-content: center; /*この３列で上下中央ぞろえ*/
+  justify-content: center; /*この３列で上下中央ぞろえ
   float: right;
- }
+ } */
+
+
+.what-list-caption h4{
+  background-color: rgb(240, 240, 240);
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  letter-spacing: 1px;
+  margin-left: 38px;
+  padding-left: 10px;
+}
 
 .what-list-caption img{
  width:30px;
@@ -642,6 +653,10 @@ h2 {
   animation-duration: 3s;
 }
 
+.slick-next {
+  right: 0px;
+}
+
 /* .about2 {
   font-size: 16px;
   font-family: "A1-light";
@@ -669,20 +684,7 @@ h2 {
     letter-spacing: 0.05em;
     font-style:italic;
   }
-
-/*  .about2 {
-    font-size: 12px;
-    font-family: "A1-light";
-    position:absolute;
-    top: 133vh;
-    left: 16vw;
-    right: 14vw;
-    text-decoration: none;
-    color: #323232;
-    letter-spacing: 0.07em;
-    line-height:18px; /*行の高さを指定
-    } */
-  }
+}
     
 @media screen and (max-width: 767px) {
 
@@ -698,7 +700,7 @@ h2 {
 }
 
 .what-list{
-  padding-bottom:70px;
+  padding-bottom:0;
 }
 
 .what-list li{
@@ -731,6 +733,17 @@ h2 {
   margin-bottom:20px;
 }
 
+.what-list-caption h4{
+  background-color: rgb(240, 240, 240);
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "A1-light",'interstate-mono, monospace';
+  letter-spacing: 1px;
+  margin-left: 21px;
+  padding-left: 10px;
+}
+}
+/* 
 .what-list-caption a{
     font-size: 12px;
 }
@@ -739,7 +752,8 @@ h2 {
 .what-list-caption a:hover{
   font-size: 12px;
    }
-}
+} */
+
 
 
 
@@ -864,7 +878,6 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
     letter-spacing: 1px;
     font-size: 10px;
   }
-
 }
 
 
