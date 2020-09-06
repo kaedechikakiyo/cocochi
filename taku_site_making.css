@@ -448,6 +448,8 @@ h1 {
 
 
 
+
+
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
   .work{
     width: 100vw;
@@ -563,7 +565,7 @@ h1 {
 }
 
 .what-list-caption{
-  width: 35%;
+  width: 36%;
   padding-right:60px;
    padding-left:30px;
 }
@@ -715,7 +717,7 @@ h2 {
 }
 
 .what-list-caption h3{
-  font-size: 19px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -730,24 +732,12 @@ h2 {
 }
 
 .what-list-caption a{
-  width: 140px;
-  height: 40px;
     font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: "A1-light",'interstate-mono, monospace';
-    color:#231300;
-    border: solid 1px #231300; /*一重の線*/
-    display: flex;
-    align-items: center;
-    justify-content: center; /*この３列で上下中央ぞろえ*/
-    float: right;
-   }
+}
 
 
 .what-list-caption a:hover{
-  width: 140px;
-  height: 40px;
+  font-size: 12px;
    }
 }
 
