@@ -450,6 +450,8 @@ h1 {
 
 
 
+
+
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
   .work{
     width: 100vw;
@@ -582,18 +584,17 @@ h1 {
   font-size: 14px;
   font-family: "A1-light",'interstate-mono, monospace';
   margin-left: 58px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   line-height: 24px;
 }
 
 .comment{  
   font-size: 13px;
   letter-spacing: 0.05em;
-  margin-left: 31px;
-  margin-bottom:20px;
+  margin-right: 2px;
+  padding-left:  19px;
   line-height: 22px;
-  margin-left: 58px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-family: "A1-light",'interstate-mono, monospace';
 }
 
@@ -615,8 +616,12 @@ h1 {
   color: gray !important
 }
 
-.slick-next {
-  display: none!important
+.what-list-caption .slick-next:before{
+  color:#bedba8!important;
+}
+
+.what-list-caption .slick-prev:before{
+  color:#bedba8!important;
 }
 
 /* .what-list-caption a{
@@ -654,7 +659,7 @@ h1 {
   margin-bottom: 10px;
   font-family: "A1-light",'interstate-mono, monospace';
   letter-spacing: 1px;
-  margin-left: 48px;
+  margin-left: 10px;
   padding-left: 10px;
 }
 
@@ -717,6 +722,106 @@ h2 {
     letter-spacing: 0.05em;
     font-style:italic;
   }
+
+  .what{
+    padding: 100px 0 0; /*内側の余白*/
+  }
+  
+  .what-list{
+    width: 78vw;
+    margin: auto;
+    list-style: none;
+  }
+  
+  .what-list li{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    margin-bottom: 100px;
+  }
+  
+  .what-list-img-wrap{
+    width:45%;
+  }
+  
+  .what-list-img-wrap img{
+    width:100%;
+    height:100%;
+  }
+  
+  .what-list-caption{
+    width: 36%;
+    padding-right:0;
+    padding-left:0;
+  }
+  
+
+  .what-list-caption h3{
+   font-size: 16px;
+   margin-bottom: 10px;
+   font-family: "A1-light",'interstate-mono, monospace';
+   letter-spacing: 1px;
+   font-style: italic;
+  }
+  
+  .what-list-caption p{
+    font-size: 12px;
+    font-family: "A1-light",'interstate-mono, monospace';
+    margin-left: 20px;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
+  
+  .comment{  
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    margin-right: 2px;
+    padding-left:  19px;
+    line-height: 20px;
+    /* margin-bottom: 20px; */
+    font-family: "A1-light",'interstate-mono, monospace';
+  }
+  
+  
+  .slick-dots li button:before {
+    font-family: slick;
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: gray !important
+  }
+  
+  .what-list-caption .slick-next:before{
+    color:#bedba8!important;
+  }
+  
+  .what-list-caption .slick-prev:before{
+    color:#bedba8!important;
+  }
+  
+
+  .what-list-caption h4{
+    background-color: rgb(240, 240, 240);
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-family: "A1-light",'interstate-mono, monospace';
+    letter-spacing: 1px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  
+  .what-list-caption img{
+   width:20px;
+  }
 }
     
 @media screen and (max-width: 767px) {
@@ -743,7 +848,7 @@ h2 {
 
 .what-list-img-wrap{
   width: 80vw;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .what-list-caption{
@@ -764,12 +869,17 @@ h2 {
 .what-list-caption p{
   font-size: 12px;
   margin-left: 31px;
-  margin-bottom:20px;
+  margin-bottom:30px;
+  line-height: 21px;
 }
 .comment{  
   font-size: 12px;
-  margin-left: 31px;
-  margin-bottom:20px;
+  margin-left: 30px;
+  margin-right:3px;
+  padding-left: 0;
+  letter-spacing: 1px;
+  line-height: 21px;
+  /* margin-bottom:20px; */
 }
 
 .what-list-caption h4{
@@ -777,11 +887,16 @@ h2 {
   font-size: 14px;
   margin-bottom: 10px;
   font-family: "A1-light",'interstate-mono, monospace';
-  letter-spacing: 1px;
-  margin-left: 21px;
+  margin-left: 20px;
   padding-left: 10px;
 }
+
+.what-list-caption .slick-prev:before{
+  color:#bedba8!important;
+  margin-left:20px!important;
 }
+}
+
 /* 
 .what-list-caption a{
     font-size: 12px;
