@@ -62,10 +62,9 @@
   }
   
   .header-logo-wrap.mini {
-    width: 8vw !important;
-    margin-top:5vh;
+    width: 7vw !important;
+    margin-top:3vh;
     padding-left:0;
-  
   }
 
 .header-nav-list {
@@ -237,16 +236,16 @@
 .pattern{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:13vh 15vw 200px;
+  margin:18vh 15vw 300px;
   /* padding-top:45vh; */
   justify-content:space-between;
-}
+  }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
   .pattern{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:13vh 14vw 0;
+    margin:150px 14vw 200px;
     justify-content:space-between;
   }
 }
@@ -352,6 +351,7 @@ h1 {
     letter-spacing: 0.07em;
     line-height:18px; /*行の高さを指定*/
     margin-bottom: 90px;
+    color: transparent;
   }
 }
 
@@ -426,10 +426,8 @@ h1 {
   
   
 .work{
-  width: 100vw;
-  height:100%;
-  margin-bottom:30px;
-  margin:0 15vw;
+  width: 15vw;
+  margin-bottom:45px;
   /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
   box-sizing:border-box;
   animation-name: fadein;
@@ -439,45 +437,191 @@ h1 {
 .work img {
   width:100%;
   height:100%;
+  border:2px solid #FFF; /* 背景と同じ色 */
   object-fit:cover /*ボックスに合わせてリサイズ*/
 }
 
-.work img:hover{
-  opacity: 0.9;
+.work img:hover {
+/* opacity: 0.5; */
+border:7px solid #A8C692;
 }
 
 
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  vertical-align: middle;
+  content: ""
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  padding:0;
+  border-radius: 2px;
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, .6); */
+  vertical-align: middle
+}
+
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8)
+}
+
+.modal-content img{
+  width:100%;
+  height:100%;
+}
+
+.modal-wrapper .modal-close {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0
+}
+
+.modal-close img{
+ width: 25px;
+ margin-top:10px;
+ margin-right:20px;
+}
+
+.modal-wrapper .modal-close2 {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0
+}
+
+.modal-close2 img{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 25px;
+ margin-top:10px;
+ margin-left:-110px!important
+}
 
 
-
-
+.modal-wrapper .modal-close:hover {
+  color: #2b2e38!important;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
   .work{
-    width: 100vw;
-    height:100%;
-    margin-bottom:10px;
+    width:15vw;
+    margin-bottom:40px;
   }
 }
 
 
 @media screen and (max-width: 767px) {
-.work{
-    width: 100vw;
-    height:100px;
-    margin:0 0 10px;
+  .work{
+    width: 32vw;
+    margin-bottom:30px;
+    /*padding:0 10px 50px 0;要素の内側の余白・上右下左*/
+    box-sizing:border-box;
+    animation-name: fadein;
+    animation-duration: 3s;
+  }
+  
+  .work img {
+    width:100%;
+    height:100%;
+    object-fit:cover /*ボックスに合わせてリサイズ*/
+  }
+
+  .modal-wrapper .modal-window {
+    box-sizing: border-box;
+    display: inline-block;
+    z-index: 20;
+    position: relative;
+    width: 83%;
+    max-width: 600px;
+    padding:0;
+    border-radius: 2px;
+    /* box-shadow: 0 0 30px rgba(0, 0, 0, .6); */
+    vertical-align: middle
+  }
+  
+  .modal-wrapper .modal-window .modal-content {
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+
+  .modal-close img{
+    width: 20px;
+    margin-top:5px;
+    margin-right:5px;
+   }
+
+   .modal-wrapper .modal-close {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
 }
 
-.work p {
-  position: absolute;/*絶対配置*/
-  color: white;/*文字は白に*/
-  font-family: "A1-light";
-  top:0;
-  left:0;
-  margin-top:30px;
-  margin-left: 150px;
-  font-style: italic;
-  }
+.what-list-caption .slick-prev:before{
+  color:#bedba8!important;
+}
+
+.modal-close2 img{
+  width:20px;
+ margin-left:-43px!important
+}
 }
 
   
@@ -489,6 +633,7 @@ h1 {
     line-height: 22px;
     letter-spacing: 0.1em;
   }
+  
 
     /*iPad用 画面の幅が480px以下の時は下のコードが反映される*/
     @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -548,6 +693,8 @@ h1 {
   width: 75vw;
   margin: auto;
   list-style: none;
+  animation-name: fadein;
+  animation-duration: 3s;
 }
 
 .what-list li{
@@ -583,16 +730,17 @@ h1 {
 .what-list-caption p{
   font-size: 14px;
   font-family: "A1-light",'interstate-mono, monospace';
-  margin-left: 58px;
+  margin-left: 40px;
   margin-bottom: 25px;
   line-height: 24px;
 }
 
 .comment{  
+  
   font-size: 13px;
   letter-spacing: 0.05em;
-  margin-right: 2px;
-  padding-left:  19px;
+  margin-right: 3px;
+  padding-left:  20px;
   line-height: 22px;
   /* margin-bottom: 20px; */
   font-family: "A1-light",'interstate-mono, monospace';
@@ -657,10 +805,11 @@ h1 {
   background-color: rgb(240, 240, 240);
   font-size: 14px;
   margin-bottom: 10px;
+
   font-family: "A1-light",'interstate-mono, monospace';
   letter-spacing: 1px;
-  margin-left: 10px;
-  padding-left: 10px;
+  margin-left: 0px;
+  padding-left: 20px;
 }
 
 .what-list-caption img{
@@ -710,6 +859,7 @@ h2 {
   animation-duration: 3s;
   } */
 
+  
 @media screen and (min-width: 768px) and (max-width: 1024px){ 
   h2 {
     font-size: 16px;
@@ -776,7 +926,7 @@ h2 {
     font-size: 11px;
     letter-spacing: 0.05em;
     margin-right: 2px;
-    padding-left:  19px;
+    padding-left:  28px;
     line-height: 20px;
     /* margin-bottom: 20px; */
     font-family: "A1-light",'interstate-mono, monospace';
@@ -874,8 +1024,8 @@ h2 {
 }
 .comment{  
   font-size: 12px;
-  margin-left: 30px;
-  margin-right:3px;
+  margin-left: 18px;
+  margin-right:4px;
   padding-left: 0;
   letter-spacing: 1px;
   line-height: 21px;
@@ -887,14 +1037,10 @@ h2 {
   font-size: 14px;
   margin-bottom: 10px;
   font-family: "A1-light",'interstate-mono, monospace';
-  margin-left: 20px;
-  padding-left: 10px;
+  margin-left: 0px;
+  padding-left: 18px;
 }
 
-.what-list-caption .slick-prev:before{
-  color:#bedba8!important;
-  margin-left:20px!important;
-}
 }
 
 /* 
