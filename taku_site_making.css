@@ -236,7 +236,7 @@
 .pattern{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:18vh 15vw 300px;
+  margin:18vh 15vw 200px;
   /* padding-top:45vh; */
   justify-content:space-between;
   }
