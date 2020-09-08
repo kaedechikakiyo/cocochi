@@ -236,7 +236,7 @@
 .pattern{
   display:flex;
   flex-wrap:wrap; /*折り返して配置*/
-  margin:18vh 15vw 200px;
+  margin:15vh 15vw 200px;
   /* padding-top:45vh; */
   justify-content:space-between;
   }
@@ -731,16 +731,15 @@ border:7px solid #A8C692;
   font-size: 14px;
   font-family: "A1-light",'interstate-mono, monospace';
   margin-left: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   line-height: 24px;
 }
 
 .comment{  
-  
   font-size: 13px;
   letter-spacing: 0.05em;
   margin-right: 3px;
-  padding-left:  20px;
+  padding-left:  19px;
   line-height: 22px;
   /* margin-bottom: 20px; */
   font-family: "A1-light",'interstate-mono, monospace';
@@ -756,20 +755,25 @@ border:7px solid #A8C692;
   left: 0;
   width: 20px;
   height: 20px;
-  content: '•';
+  color: #161616!important;
   text-align: center;
-  opacity: .5;
+  opacity: 0.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: gray !important
 }
 
 .what-list-caption .slick-next:before{
-  color:#bedba8!important;
+  color:#abd190!important;
+  content: '>'!important;
+  font-size:25px;
+  font-family: 'Gill Sans';
 }
 
+
 .what-list-caption .slick-prev:before{
-  color:#bedba8!important;
+  color:#abd190!important;
+  content: '<'!important;
+  font-size:25px;
+  font-family: 'Gill Sans';
 }
 
 /* .what-list-caption a{
@@ -802,14 +806,15 @@ border:7px solid #A8C692;
 
 
 .what-list-caption h4{
-  background-color: rgb(240, 240, 240);
+  background:url(images/bottom.png) bottom repeat-x;
+  background-size: 15px;
   font-size: 14px;
   margin-bottom: 10px;
-
+  color: #abd190;
   font-family: "A1-light",'interstate-mono, monospace';
   letter-spacing: 1px;
-  margin-left: 0px;
-  padding-left: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .what-list-caption img{
@@ -840,9 +845,6 @@ h2 {
   animation-duration: 3s;
 }
 
-.slick-next {
-  right: 0px;
-}
 
 /* .about2 {
   font-size: 16px;
@@ -1033,7 +1035,7 @@ h2 {
 }
 
 .what-list-caption h4{
-  background-color: rgb(240, 240, 240);
+  /* background-color: rgb(240, 240, 240) */
   font-size: 14px;
   margin-bottom: 10px;
   font-family: "A1-light",'interstate-mono, monospace';
