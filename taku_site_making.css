@@ -461,7 +461,6 @@ h1 {
   box-sizing:border-box;
   animation-name: fadein;
   animation-duration: 3s;
-  border:5px solid #A8C692;
 }
 
 .work img {
@@ -473,7 +472,7 @@ h1 {
 
 .work img:hover {
 /* opacity: 0.5; */
-border:0px solid #A8C692;
+border:7px solid #A8C692;
 }
 
 .work2{
