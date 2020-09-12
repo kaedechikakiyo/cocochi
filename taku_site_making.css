@@ -255,7 +255,7 @@
 .pattern{
     display:flex;
     flex-wrap:wrap; /*折り返して配置*/
-    margin:10vh 14vw 120px;
+    margin:10vh 14vw 110px;
     justify-content:space-between;
   }
 }
@@ -359,7 +359,7 @@ h1 {
   color: #323232;
   letter-spacing: 0.05em;
   line-height:25px; /*行の高さを指定*/
-  margin-bottom: 55px;
+  margin-bottom: 80px;
   animation-name: fadein;
   animation-duration: 3s;
 }
@@ -818,13 +818,13 @@ border:7px solid #A8C692;
 }
 
 .what-list-caption .slick-next:before{
-  border: solid 1px #A8C692;
-  border-radius: 800px;
   color:#A8C692;
   content: '›'!important;
   font-size:22px;
   font-family: 'Gill Sans';
   padding:0 11px 5px;
+  border: solid 1px #A8C692;
+  border-radius: 800px;
 }
 
 
@@ -880,7 +880,7 @@ border:7px solid #A8C692;
 }
 
 .what-list-caption img{
- width:40px;
+ width:27px;
 }
 
 .what-list-reverse{
@@ -1035,7 +1035,7 @@ h2 {
   
   
   .what-list-caption img{
-   width:30px;
+   width:20px;
   }
 }
     
@@ -1079,7 +1079,7 @@ h2 {
 }
 
 .what-list-caption img{
-  width: 25px;
+  width:18px;
 }
 
 .what-list-caption p{
