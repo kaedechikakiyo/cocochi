@@ -573,14 +573,14 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
   }
   
 .catch-copy{
-  padding:0 23vw;
+  padding:0 24vw;
 
    margin-bottom: 160px;
  }
 
  .catch-copy .midashi {
     position:absolute; 
-    left:26vw;
+    left:27vw;
     width:5vw;
       box-sizing:border-box;
   }
@@ -655,14 +655,11 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
 }
 
 .what-list-caption a{
-  width: 140px;
-  height: 40px;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     font-family: "A1-light",'interstate-mono, monospace';
     color:#231300;
-    border: solid 1px #231300; /*一重の線*/
     display: flex;
     align-items: center;
     justify-content: center; /*この３列で上下中央ぞろえ*/
@@ -671,8 +668,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
 
 
 .what-list-caption a:hover{
-  width: 140px;
-  height: 40px;
+  font-size: 12px;
    }
 
    #contact {
@@ -685,6 +681,7 @@ _::-webkit-full-page-media, _:future, :root .scroll-top {
   iframe{
     padding-top:40px;
     width:70%;
+    margin-bottom: 40px;
   }
 }
 
