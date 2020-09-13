@@ -319,11 +319,11 @@ h1 {
   right:24vw; */
 
   margin-left:10px;
-  margin-right:220px;
+  margin-right:260px;
   text-decoration: none;
   color: #323232;
   letter-spacing: 0.05em;
-  line-height:25px; /*行の高さを指定*/
+  line-height:23px; /*行の高さを指定*/
   animation-name: fadein;
   animation-duration: 3s;
   margin-bottom: 55px;
