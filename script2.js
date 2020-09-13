@@ -178,6 +178,8 @@ $(function() {
     $('#slick01').slick({
     autoplay: true, //自動再生
     dots: true, //ドットインジケータの表示
+    arrows: false
+    
     });
     });
 
@@ -185,6 +187,7 @@ $(function() {
       $('#slick02').slick({
       autoplay: true, //自動再生
       dots: true, //ドットインジケータの表示
+      arrows: false
       });
       });
 
@@ -192,30 +195,71 @@ $(function() {
         $('#slick03').slick({
         autoplay: true, //自動再生
         dots: true, //ドットインジケータの表示
+        arrows: false
         });
         });
 
-        $(function(){
-          $('#slick04').slick({
-          // dots: true, //ドットインジケータの表示         
-          });
-          });
 
-          $(function(){
-            $('#slick05').slick({
-            // dots: true, //ドットインジケータの表示         
-            });
-            });
+        // $(function(){
+        //   $('#slick04').slick({
+        //   // dots: true, //ドットインジケータの表示 
+        // });
+        // });
+        
 
-            $(function(){
-              $('#slick06').slick({
-              // dots: true, //ドットインジケータの表示         
-              });
+//         $(function(){
+//            $('#slick05').slick({
+//           // dots: true, //ドットインジケータの表示         
+//         });
+//         });
+
+//         $(function(){
+//           $('#slick06').slick({
+//           // dots: true, //ドットインジケータの表示         
+//       　 });
+// 　　　　　});
 
 
+$(function() {
+  $('#slick04').on('init', function(event, slick) {
+    $(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
+    $('.current').text(slick.currentSlide + 1);
+    $('.total').text(slick.slideCount);
+  })
+  .slick({
+    // option here...
+  })
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.current').text(nextSlide + 1);
+  });
+});
 
 
+$(function() {
+  $('#slick05').on('init', function(event, slick) {
+    $(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
+    $('.current').text(slick.currentSlide + 1);
+    $('.total').text(slick.slideCount);
+  })
+  .slick({
+    // option here...
+  })
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.current').text(nextSlide + 1);
+  });
+});
 
 
-              
-              });
+$(function() {
+  $('#slick06').on('init', function(event, slick) {
+    $(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
+    $('.current').text(slick.currentSlide + 1);
+    $('.total').text(slick.slideCount);
+  })
+  .slick({
+    // option here...
+  })
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.current').text(nextSlide + 1);
+  });
+});
