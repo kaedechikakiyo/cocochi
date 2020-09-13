@@ -11,8 +11,8 @@
   }
 
   @font-face {
-    font-family:"A1-medi";
-    src: url(font/AP-OTF-A1GothicStdN-Medium.otf);
+    font-family:"A1-regu";
+    src: url(font/AP-OTF-A1GothicStdN-Regular.otf);
   }
   @font-face {
     font-family:"A1-light";
@@ -45,7 +45,7 @@
   }
   
   body {
-    color: #231300;
+    color: #323232;
     background-color: white;
   }
   
@@ -641,7 +641,6 @@ border:7px solid #A8C692;
     width: 83%;
     max-width: 600px;
     padding:0;
-    border-radius: 2px;
     /* box-shadow: 0 0 30px rgba(0, 0, 0, .6); */
     vertical-align: middle
   }
@@ -657,7 +656,7 @@ border:7px solid #A8C692;
     margin-right:5px;
    }
 
-   .modal-wrapper .modal-close {
+  .modal-window .modal-close {
     z-index: 20;
     position: absolute;
     top: 0;
@@ -796,7 +795,15 @@ border:7px solid #A8C692;
   padding-left: 21px;
   line-height: 22px;
   /* margin-bottom: 20px; */
-  font-family: "A1-light",'interstate-mono, monospace';
+  font-family: "A1-light";
+}
+
+span {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding-left: 5px;
+  font-family: "A1-regu";
+  font-weight: 600;
 }
 
 
@@ -896,7 +903,7 @@ border:7px solid #A8C692;
   background-size: 14px;
   font-size: 15px;
   margin-bottom: 10px;
-  color: #abd190;
+  color: #c0daad;
   font-family: "A1-light",'interstate-mono, monospace';
   letter-spacing: 1px;
   margin-top: 3px;
@@ -1059,8 +1066,6 @@ h2 {
     background-size: 13px;
     font-size: 15px;
     margin-bottom: 10px;
-    color: #abd190;
-    font-family: "A1-light",'interstate-mono, monospace';
     letter-spacing: 1px;
   }
   
