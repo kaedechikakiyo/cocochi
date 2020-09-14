@@ -243,3 +243,4 @@ $(function() {
     $('.current').text(nextSlide + 1);
   });
 });
+

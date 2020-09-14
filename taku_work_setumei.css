@@ -84,6 +84,8 @@
   font-weight: 600;
   letter-spacing: 0.05em;
   font-family: "A1-light",'interstate-mono, monospace';
+  animation-name: fadein;
+  animation-duration: 2s;
 }
 
 .header-nav-list a:hover {

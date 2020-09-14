@@ -211,6 +211,8 @@ display:none;
   align-items: center;
   width: 100%;
   font-style: italic;
+  animation-name: fadein;
+  animation-duration: 2s;
 }
 
 .header-sp-nav-list  a:hover {
