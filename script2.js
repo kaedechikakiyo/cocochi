@@ -200,26 +200,6 @@ $(function() {
         });
 
 
-        // $(function(){
-        //   $('#slick04').slick({
-        //   // dots: true, //ドットインジケータの表示 
-        // });
-        // });
-        
-
-//         $(function(){
-//            $('#slick05').slick({
-//           // dots: true, //ドットインジケータの表示         
-//         });
-//         });
-
-//         $(function(){
-//           $('#slick06').slick({
-//           // dots: true, //ドットインジケータの表示         
-//       　 });
-// 　　　　　});
-
-
 $(function() {
   $('#slick04').on('init', function(event, slick) {
     $(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');

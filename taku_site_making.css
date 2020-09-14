@@ -475,6 +475,7 @@ h1 {
 border:7px solid #A8C692;
 }
 
+
 .work2{
   width: 15vw;
   margin-bottom:45px;
@@ -671,7 +672,6 @@ border:7px solid #A8C692;
 }
 }
 
-  
   .work h2{
     text-decoration: none;
     font-size: 18px;
@@ -859,33 +859,6 @@ span {
     display: block;
 }
 
-/* .what-list-caption a{
- font-size: 13px;
- font-weight: 600;
- text-decoration: none;
- font-family: "A1-light",'interstate-mono, monospace';
- color:#231300;
-
- border-bottom: solid 1.2px #231300;
- /* border: solid 1px #231300; 一重の線 
- display: flex;
- align-items: center;
- justify-content: center; /*この３列で上下中央ぞろえ
- float: right;
-}
-
-.what-list-caption a:hover{
-  font-size: 13px;
-  font-weight: 600;
-  border-bottom: solid 1.2px #A8C692;
-  font-family: "A1-light",'interstate-mono, monospace';
-  color:#A8C692;
-  /* border: solid 1px #A8C692; 一重の線 
-  display: flex;
-  align-items: center;
-  justify-content: center; /*この３列で上下中央ぞろえ
-  float: right;
- } */
 
 
 .what-list-caption h4{
