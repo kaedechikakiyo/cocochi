@@ -795,6 +795,7 @@ border:7px solid #A8C692;
   /* margin-bottom: 20px; */
   font-family: "A1-light";
   border: solid 1px #c0daad;
+  border-radius: 8px;
 }
 
 .what-list-caption h4{
@@ -846,8 +847,8 @@ span {
 .what-list-caption .slick-next:before{
 
   content: '';
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-top: 1px solid #A8C692;
   border-right: 1px solid #A8C692;
   -webkit-transform: rotate(45deg);
