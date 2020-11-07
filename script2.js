@@ -154,24 +154,24 @@ $(function() {
   });
 
 
-  $(function(){
-    ScrollReveal().reveal('.what-list li');
-  });
+  // $(function(){
+  //   ScrollReveal().reveal('.what-list li');
+  // });
 
-  $(function(){
-    var 任意の変数名= {
-              delay: 800,
+  // $(function(){
+  //   var 任意の変数名= {
+  //             delay: 800,
 
-              duration: 1000,
+  //             duration: 1000,
       
-              distance: '100px', //要素の移動距離
+  //             distance: '100px', //要素の移動距離
       
-              origin: 'bottom' //要素が移動してくる方向
-          };
+  //             origin: 'bottom' //要素が移動してくる方向
+  //         };
       
-          ScrollReveal().reveal('.what-list li');
+  //         ScrollReveal().reveal('.what-list li');
       
-  });
+  // });
 
 
   $(function(){
@@ -243,4 +243,19 @@ $(function() {
     $('.current').text(nextSlide + 1);
   });
 });
+
+ScrollReveal().reveal('.work img',{    
+  duration: 800, // アニメーションの完了にかかる時間
+  viewFactor: 0.3, // 0~1,どれくらい見えたら実行するか
+  reset: false,   // 何回もアニメーション表示するか
+  distance: '10%'
+  });
+
+
+ScrollReveal().reveal('.what-list li',{    
+  duration: 800, // アニメーションの完了にかかる時間
+  viewFactor: 0.3, // 0~1,どれくらい見えたら実行するか
+  reset: false,   // 何回もアニメーション表示するか
+  distance: '10%'
+  });
 
